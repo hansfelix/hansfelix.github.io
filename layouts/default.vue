@@ -1,10 +1,25 @@
 <template>
-  <div>
+  <section class="default-layout">
+    <toolbar />
     <nuxt />
-  </div>
+  </section>
 </template>
 
-<style>
+<script>
+import Toolbar from '~/components/Toolbar';
+export default {
+  components: {
+    Toolbar
+  }
+};
+</script>
+
+<style lang="scss">
+.default-layout {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
