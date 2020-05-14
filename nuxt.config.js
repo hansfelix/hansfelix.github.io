@@ -70,5 +70,12 @@ module.exports = {
     scss: [
       "@/assets/scss/_mq.scss"
     ]
+  },
+
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true
+    }
   }
 }
