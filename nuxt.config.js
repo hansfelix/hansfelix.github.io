@@ -4,6 +4,9 @@ module.exports = {
   generate: {
     dir: 'docs'
   },
+  router: {
+    base: '/personal-page/'
+  },
   /*
   ** Headers of the page
   */
