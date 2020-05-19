@@ -4,17 +4,14 @@ export const state = () => ({
     isDarkMode: isDarkMode
 })
 
+export const getters = {
+    isDarkMode(state) {
+        return state.isDarkMode;
+    },
+}
+
 export const mutations = {
-    add(state, text) {
-        state.list.push({
-            text,
-            done: false
-        })
+    toogleIsDarkMode(state) {
+        state.isDarkMode = !state.isDarkMode
     },
-    remove(state, { todo }) {
-        state.list.splice(state.list.indexOf(todo), 1)
-    },
-    toggle(state, todo) {
-        todo.done = !todo.done
-    }
 }

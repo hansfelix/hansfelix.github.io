@@ -1,15 +1,28 @@
 <template>
-  <section class="default-layout">
+  <section class="default-layout" :class="classDarkMode">
     <toolbar />
     <nuxt />
   </section>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Toolbar from '~/components/Toolbar';
 export default {
   components: {
     Toolbar
+  },
+
+  computed: {
+    ...mapGetters({
+      isDarkMode: 'settings/isDarkMode'
+    }),
+
+    classDarkMode() {
+      return {
+        'dark-mode': this.isDarkMode
+      };
+    }
   }
 };
 </script>
@@ -18,6 +31,11 @@ export default {
 .default-layout {
   display: grid;
   grid-template-columns: 100px 1fr;
+
+  @include mq($until: tablet) {
+    grid-template-columns: none;
+    grid-template-rows: 50px 1fr;
+  }
 }
 
 html {
