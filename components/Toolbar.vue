@@ -1,7 +1,7 @@
 <template>
   <section class="toolbar">
     <div class="toolbar__logo">
-      <img src="/logos/logo-hans-felix.svg" alt="Hans Felix" />
+      <MainLogo />
     </div>
     <div class="toolbar__spacer"></div>
     <div class="toolbar__dark_mode">
@@ -12,9 +12,11 @@
 </template>
 
 <script>
+import MainLogo from "~/components/MainLogo";
 import ThemeButton from '~/components/ThemeButton';
 export default {
   components: {
+    MainLogo,
     ThemeButton
   }
 };
