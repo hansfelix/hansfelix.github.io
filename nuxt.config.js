@@ -1,6 +1,9 @@
 
 module.exports = {
   mode: 'spa',
+  generate: {
+    dir: 'docs'
+  },
   /*
   ** Headers of the page
   */
