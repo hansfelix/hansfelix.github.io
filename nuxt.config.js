@@ -12,7 +12,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "",
+    title: "Hans Felix",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -53,7 +53,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/style-resources-module
     "@nuxtjs/style-resources",
     // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
-    "nuxt-i18n"
+    "nuxt-i18n",
+    // Doc: https://github.com/nuxt-community/svg-module
+    "@nuxtjs/svg"
   ],
   /*
    ** Axios module configuration

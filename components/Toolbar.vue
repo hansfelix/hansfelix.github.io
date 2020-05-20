@@ -33,9 +33,11 @@ export default {
 <style lang="scss">
 // Variables in dark mode
 .dark-mode .toolbar {
+  --link-text-color: #{$text-color-dark};
 }
 
 .toolbar {
+  --link-text-color: #{$text-color};
   display: flex;
   height: 100px;
   box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18), 1px 0 13px -13px #000;
@@ -90,7 +92,7 @@ export default {
     display: inline-block;
     padding: 0 10px 10px;
     margin-right: 20px;
-    color: #707070;
+    color: var(--link-text-color);
     font-size: 16px;
     text-decoration: none;
 
