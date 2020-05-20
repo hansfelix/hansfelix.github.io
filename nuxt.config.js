@@ -34,7 +34,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ["@/plugins/vClickOutside"],
   /*
    ** Nuxt.js dev-modules
    */
