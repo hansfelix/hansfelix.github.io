@@ -77,7 +77,8 @@ module.exports = {
   */
   styleResources: {
     scss: [
-      "@/assets/scss/_mq.scss"
+      "@/assets/scss/_mq.scss",
+      "@/assets/scss/_mixins.scss"
     ]
   },
 
