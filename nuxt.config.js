@@ -88,6 +88,10 @@ module.exports = {
         en: require("./static/locales/en.json"),
         es: require("./static/locales/es.json")
       }
+    },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected"
     }
   },
 

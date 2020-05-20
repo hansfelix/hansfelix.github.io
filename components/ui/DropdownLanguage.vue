@@ -2,11 +2,11 @@
   <div class="dropdown-language" v-bind:class="{ 'is-active': isDropdownActive }" v-click-outside="away">
     <div class="dropdown-language__trigger" @click="isDropdownActive = !isDropdownActive">
       <div class="dropdown-language__icon" v-html="rawLangugage"></div>
-      <span>ES</span>
+      <span>{{ $i18n.locale }}</span>
     </div>
     <div class="dropdown-language__menu" v-if="isDropdownActive">
-      <div class="dropdown-language__menu-item">EN - English</div>
-      <div class="dropdown-language__menu-item">ES - Español</div>
+      <nuxt-link class="dropdown-language__menu-item" :to="switchLocalePath('en')">EN - English</nuxt-link>
+      <nuxt-link class="dropdown-language__menu-item" :to="switchLocalePath('es')">ES - Español</nuxt-link>
     </div>
   </div>
 </template>
@@ -43,6 +43,7 @@ export default {
   &__trigger {
     @include flex-and-center-vertical;
 
+    text-transform: uppercase;
     cursor: pointer;
   }
 
@@ -65,6 +66,8 @@ export default {
   }
 
   &__menu-item {
+    display: block;
+    text-decoration: none;
     padding: 10px 15px;
 
     &:first-child {
