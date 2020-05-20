@@ -3,9 +3,8 @@
       "aboutMe": "About me",
       "work": "Work"
     },
-    "home": {
-      "title": "Welcome",
-      "introduction": "This is an introduction in English."
+    "ui": {
+      "darkMode": "Dark Mode"
     },
     "about": {
       "title": "About",

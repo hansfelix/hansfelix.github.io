@@ -3,9 +3,8 @@
       "aboutMe": "Sobre mi",
       "work": "Portafolio"
     },
-    "home": {
-      "title": "Bienvenue",
-      "introduction": "Ceci est un texte d'introduction en Français."
+    "ui": {
+      "darkMode": "Modo Oscuro"
     },
     "about": {
       "title": "À propos",
