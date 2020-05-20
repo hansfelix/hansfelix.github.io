@@ -20,7 +20,8 @@
     "express": "^4.16.4",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.0.0",
-    "sass-mq": "^5.0.1"
+    "sass-mq": "^5.0.1",
+    "vue-i18n": "^8.17.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
