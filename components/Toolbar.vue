@@ -3,17 +3,25 @@
     <div class="toolbar__logo">
       <MainLogo />
     </div>
-    <div class="toolbar__spacer"></div>
-    <div class="toolbar__dark_mode">
-      <ThemeButton />
+    <div class="toolbar__content">
+      <div class="toolbar__nav">
+        <a class="toolbar__link" href="#">{{ $t("links.aboutMe") }}</a>
+        <a class="toolbar__link" href="#">Portafolio</a>
+      </div>
+
+      <div class="toolbar__actions">
+        <div class="toolbar__dark_mode">
+          <ThemeButton />
+        </div>
+        <div class="toolbar__language">EN</div>
+      </div>
     </div>
-    <div class="toolbar__language">EN</div>
   </section>
 </template>
 
 <script>
 import MainLogo from "~/components/MainLogo";
-import ThemeButton from '~/components/ThemeButton';
+import ThemeButton from "~/components/ThemeButton";
 export default {
   components: {
     MainLogo,
@@ -25,21 +33,17 @@ export default {
 <style lang="scss">
 // Variables in dark mode
 .dark-mode .toolbar {
-  --toolbar-background: #2c2c2c;
 }
 
 .toolbar {
-  --toolbar-background: #fff;
-
   display: flex;
-  flex-direction: column;
-  background-color: var(--toolbar-background);
-  box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18),
-    1px 0 13px -13px #000;
+  height: 100px;
+  box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18), 1px 0 13px -13px #000;
   transition: 0.3s all ease-in-out;
 
   &__logo {
-    height: 90px;
+    height: 100%;
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,8 +55,17 @@ export default {
     }
   }
 
-  &__spacer {
+  &__content {
     flex: 1;
+    @include flex-and-center-vertical;
+  }
+
+  &__nav {
+    flex: 1;
+  }
+
+  &__actions {
+    flex: 0;
   }
 
   &__dark_mode {
@@ -71,11 +84,29 @@ export default {
     justify-content: center;
   }
 
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px 10px;
+    margin-right: 20px;
+    color: #707070;
+    font-size: 16px;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #dfdfdf;
+      height: 3px;
+      width: 100%;
+    }
+  }
+
   @include mq($until: tablet) {
-    height: 100%;
     flex-direction: row;
-    box-shadow: 0px 1px 13px -13px #000, 0 9px 8px -9px rgba(0, 0, 0, 0.18),
-      0 1px 13px -13px #000;
+    box-shadow: 0px 1px 13px -13px #000, 0 9px 8px -9px rgba(0, 0, 0, 0.18), 0 1px 13px -13px #000;
 
     &__logo {
       height: 100%;

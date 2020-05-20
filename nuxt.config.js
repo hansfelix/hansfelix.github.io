@@ -6,7 +6,9 @@ module.exports = {
     dir: "docs"
   },
   router: {
-    base: development ? "/" : "/personal-page/"
+    middleware: "i18n",
+    base: development ? "/" : "/personal-page/",
+    routes: ['/', '/about', '/es', '/fr/about']
   },
   /*
    ** Headers of the page
@@ -34,7 +36,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ["~/plugins/i18n.js"],
   /*
    ** Nuxt.js dev-modules
    */
