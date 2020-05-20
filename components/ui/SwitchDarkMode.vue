@@ -1,5 +1,6 @@
 <template>
   <section class="switch-dark-mode" :class="classSwitchDarkMode">
+    <div class="switch-dark-mode__icon" v-html="rawMoon"></div>
     <span class="switch-dark-mode__text">{{ $t("ui.darkMode") }}</span>
     <div class="switch-dark-mode__control" @click="toogleDarkMode">
       <div class="switch-dark-mode__circle" type="checkbox"></div>
@@ -10,10 +11,11 @@
 
 <script>
 import { mapGetters } from "vuex";
+import rawMoon from "~/assets/icons/moon.svg?raw";
 
 export default {
   data() {
-    return {};
+    return { rawMoon };
   },
 
   computed: {
@@ -37,18 +39,29 @@ export default {
 </script>
 
 <style lang="scss">
+.dark-mode .switch-dark-mode {
+  --icon-fill: #{$text-color-dark};
+}
+
 .switch-dark-mode {
+  --icon-fill: #{$text-color};
+
   $self: &;
   z-index: 0;
   position: relative;
-  display: inline-block;
   font-size: 14px;
   line-height: 1.5;
   @include flex-and-center-vertical;
 
+  &__icon {
+    fill: var(--icon-fill);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
   &__text {
     display: inline-block;
-    width: 100%;
     white-space: nowrap;
   }
 

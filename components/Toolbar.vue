@@ -13,7 +13,9 @@
         <div class="toolbar__dark_mode">
           <SwitchDarkMode />
         </div>
-        <div class="toolbar__language">EN</div>
+        <div class="toolbar__language">
+          <DropdownLanguage />
+        </div>
       </div>
     </div>
   </section>
@@ -22,10 +24,13 @@
 <script>
 import MainLogo from "~/components/MainLogo";
 import SwitchDarkMode from "~/components/ui/SwitchDarkMode";
+import DropdownLanguage from "~/components/ui/DropdownLanguage";
+
 export default {
   components: {
     MainLogo,
-    SwitchDarkMode
+    SwitchDarkMode,
+    DropdownLanguage
   }
 };
 </script>
@@ -59,6 +64,7 @@ export default {
 
   &__content {
     flex: 1;
+    padding: 0 20px;
     @include flex-and-center-vertical;
   }
 
@@ -72,11 +78,7 @@ export default {
   }
 
   &__dark_mode {
-    min-height: 50px;
-    min-width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-right: 15px;
   }
 
   &__language {
