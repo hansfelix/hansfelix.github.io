@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Toolbar from '~/components/Toolbar';
+import { mapGetters } from "vuex";
+import Toolbar from "~/components/Toolbar";
 export default {
   components: {
     Toolbar
@@ -15,12 +15,12 @@ export default {
 
   computed: {
     ...mapGetters({
-      isDarkMode: 'settings/isDarkMode'
+      isDarkMode: "settings/isDarkMode"
     }),
 
     classDarkMode() {
       return {
-        'dark-mode': this.isDarkMode
+        "dark-mode": this.isDarkMode
       };
     }
   }
@@ -28,19 +28,27 @@ export default {
 </script>
 
 <style lang="scss">
+.dark-mode.default-layout {
+  --background-default-layout: #0c1f30;
+  --color-default-layout: #889fb0;
+}
+
 .default-layout {
+  --background-default-layout: #f8f8f8;
+  --color-default-layout: #6c6c6c;
+
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px 1fr;
+  color: var(--color-default-layout);
+  background-color: var(--background-default-layout);
+  transition: 0.2s background ease-in-out;
 
   @include mq($until: tablet) {
-    grid-template-columns: none;
-    grid-template-rows: 50px 1fr;
   }
 }
 
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
