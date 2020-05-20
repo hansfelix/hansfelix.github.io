@@ -1,9 +1,7 @@
 {
     "links": {
       "aboutMe": "Sobre mi",
-      "about": "À propos",
-      "english": "Version Anglaise",
-      "french": "Version Française"
+      "work": "Portafolio"
     },
     "home": {
       "title": "Bienvenue",

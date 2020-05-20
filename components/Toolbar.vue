@@ -6,7 +6,7 @@
     <div class="toolbar__content">
       <div class="toolbar__nav">
         <a class="toolbar__link" href="#">{{ $t("links.aboutMe") }}</a>
-        <a class="toolbar__link" href="#">Portafolio</a>
+        <a class="toolbar__link" href="#">{{ $t("links.work") }}</a>
       </div>
 
       <div class="toolbar__actions">

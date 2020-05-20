@@ -1,9 +1,7 @@
 {
     "links": {
       "aboutMe": "About me",
-      "about": "About",
-      "english": "English version",
-      "french": "French version"
+      "work": "Work"
     },
     "home": {
       "title": "Welcome",

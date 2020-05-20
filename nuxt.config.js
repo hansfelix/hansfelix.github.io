@@ -6,9 +6,7 @@ module.exports = {
     dir: "docs"
   },
   router: {
-    middleware: "i18n",
-    base: development ? "/" : "/personal-page/",
-    routes: ['/', '/about', '/es', '/fr/about']
+    base: development ? "/" : "/personal-page/"
   },
   /*
    ** Headers of the page
@@ -36,7 +34,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/i18n.js"],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -53,7 +51,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
     // Doc: https://github.com/nuxt-community/style-resources-module
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
+    "nuxt-i18n"
   ],
   /*
    ** Axios module configuration
@@ -74,6 +74,19 @@ module.exports = {
    */
   styleResources: {
     scss: ["@/assets/scss/_mq.scss", "@/assets/scss/_mixins.scss"]
+  },
+
+  i18n: {
+    locales: ["en", "es"],
+    strategy: "prefix_except_default",
+    defaultLocale: "en",
+    vueI18n: {
+      fallbackLocale: "en",
+      messages: {
+        en: require("./static/locales/en.json"),
+        es: require("./static/locales/es.json")
+      }
+    }
   },
 
   vue: {
