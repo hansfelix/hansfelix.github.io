@@ -29,13 +29,13 @@ export default {
 
 <style lang="scss">
 .dark-mode.default-layout {
-  --background-default-layout: #0c1f30;
-  --color-default-layout: #889fb0;
+  --background-default-layout: #1a252e;
+  --color-default-layout: #{$text-color-dark};
 }
 
 .default-layout {
   --background-default-layout: #f8f8f8;
-  --color-default-layout: #6c6c6c;
+  --color-default-layout: #{$text-color};
 
   display: grid;
   grid-template-rows: 100px 1fr;

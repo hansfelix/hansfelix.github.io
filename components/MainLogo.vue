@@ -15,17 +15,17 @@
 
 <style lang="scss">
 .dark-mode .main-logo {
-  --main-logo-h-letter-background: #d6d6d6;
+  --main-logo-h-letter-background: #{$text-color-dark};
 }
 
 .main-logo {
-  --main-logo-h-letter-background: #6c6c6c;
+  --main-logo-h-letter-background: #{$text-color};
 
   animation: 1s appear;
   margin: auto;
 
   &__decorator {
-    fill: #2c8bca;
+    fill: $main-color;
   }
 
   &__h-letter {

@@ -11,7 +11,7 @@
 
       <div class="toolbar__actions">
         <div class="toolbar__dark_mode">
-          <ThemeButton />
+          <SwitchDarkMode />
         </div>
         <div class="toolbar__language">EN</div>
       </div>
@@ -21,11 +21,11 @@
 
 <script>
 import MainLogo from "~/components/MainLogo";
-import ThemeButton from "~/components/ThemeButton";
+import SwitchDarkMode from "~/components/ui/SwitchDarkMode";
 export default {
   components: {
     MainLogo,
-    ThemeButton
+    SwitchDarkMode
   }
 };
 </script>
@@ -66,6 +66,7 @@ export default {
 
   &__actions {
     flex: 0;
+    @include flex-and-center-vertical;
   }
 
   &__dark_mode {
@@ -98,7 +99,7 @@ export default {
       position: absolute;
       bottom: 0;
       left: 0;
-      background-color: #dfdfdf;
+      background-color: #9494944d;
       height: 3px;
       width: 100%;
     }

@@ -73,7 +73,7 @@ module.exports = {
    ** Sass vairables
    */
   styleResources: {
-    scss: ["@/assets/scss/_mq.scss", "@/assets/scss/_mixins.scss"]
+    scss: ["@/assets/scss/_colors.scss", "@/assets/scss/_mq.scss", "@/assets/scss/_mixins.scss"]
   },
 
   i18n: {
