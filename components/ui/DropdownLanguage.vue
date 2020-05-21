@@ -4,10 +4,12 @@
       <div class="dropdown-language__icon" v-html="rawLangugage"></div>
       <span>{{ $i18n.locale }}</span>
     </div>
-    <div class="dropdown-language__menu" v-if="isDropdownActive">
-      <nuxt-link class="dropdown-language__menu-item" :to="switchLocalePath('en')">EN - English</nuxt-link>
-      <nuxt-link class="dropdown-language__menu-item" :to="switchLocalePath('es')">ES - Español</nuxt-link>
-    </div>
+    <transition name="bounce">
+      <div class="dropdown-language__menu" v-if="isDropdownActive">
+        <nuxt-link class="dropdown-language__menu-item" :to="switchLocalePath('en')">EN - English</nuxt-link>
+        <nuxt-link class="dropdown-language__menu-item" :to="switchLocalePath('es')">ES - Español</nuxt-link>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -57,9 +59,8 @@ export default {
 
   &__menu {
     position: absolute;
-    bottom: 0;
+    top: calc(100% + 10px);
     right: 0;
-    transform: translateY(calc(100% + 10px));
     background: white;
     white-space: nowrap;
     border-radius: 4px;
