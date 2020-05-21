@@ -6,9 +6,9 @@
     "ui": {
       "darkMode": "Modo Oscuro"
     },
-    "about": {
-      "title": "À propos",
-      "introduction": "Cette page est faite pour vous donner plus d'informations."
+    "index": {
+      "overline": "¡Hola! Mi nombre es",
+      "desciption": "Soy un desarrollador de software radicado en Perú, me especializo en la creación de sitios web excepcionales. Ocasionalmente diseño. Apasionado por combinar un código limpio con un diseño increíble."
     }
   }
   
