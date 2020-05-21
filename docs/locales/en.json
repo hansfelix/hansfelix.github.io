@@ -6,9 +6,9 @@
     "ui": {
       "darkMode": "Dark Mode"
     },
-    "about": {
-      "title": "About",
-      "introduction": "This page is made to give you more informations."
+    "index": {
+      "overline": "Hi! My name is",
+      "desciption": "I am an experienced software developer based in Peru, specializing in building exceptional websites. Occasionally designing. Passionate about combining beautiful code with beautiful design."
     }
   }
   

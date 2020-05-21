@@ -1,12 +1,10 @@
-let development = process.env.NODE_ENV !== "production";
-
 module.exports = {
   mode: "spa",
   generate: {
     dir: "docs"
   },
   router: {
-    base: development ? "/" : "/personal-page/"
+    base: "/"
   },
   /*
    ** Headers of the page
