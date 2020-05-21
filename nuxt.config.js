@@ -30,11 +30,11 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["normalize.css/normalize.css", "@/assets/css/main.css","@/assets/scss/transitions.scss"],
+  css: ["normalize.css/normalize.css", "@/assets/css/main.css", "@/assets/scss/transitions.scss"],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/vClickOutside"],
+  plugins: ["~/plugins/global.js", "@/plugins/vClickOutside"],
   /*
    ** Nuxt.js dev-modules
    */
