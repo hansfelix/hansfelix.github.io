@@ -1,48 +1,59 @@
 <template>
   <div class="container">
-   <p>Hola</p>
+    <p>Hola</p>
+    <div class="social">
+      <a class="social__item" href="https://www.linkedin.com/in/hans-felix/" target="_blank">
+        <h-icon name="linkedin" width="20" height="20"></h-icon>
+      </a>
+      <a class="social__item" href="https://twitter.com/hansfelixramos" target="_blank">
+        <h-icon name="twitter" width="20" height="20"></h-icon>
+      </a>
+      <a class="social__item" href="https://stackoverflow.com/users/9176232/hans-felix-ramos?tab=profile" target="_blank">
+        <h-icon name="stackoverflow" width="20" height="20"> </h-icon>
+      </a>
+      <a class="social__item" href="https://github.com/hansfelix" target="_blank">
+        <h-icon name="github" width="20" height="20"> </h-icon>
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-import ShapeTopBackground from '~/components/ShapeTopBackground';
-
 export default {
-  components: {
-    ShapeTopBackground
-  }
+  components: {}
 };
 </script>
 
-<style>
+<style lang="scss">
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
+}
+
+.social {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  text-align: center;
-}
+  padding-bottom: 50px;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  &__item {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: .2s background ease-in-out;
+    @include flex-and-center;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+    &:hover {
+      background-color: #0000001a;
+    }
+  }
 }
 </style>
