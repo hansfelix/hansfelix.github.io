@@ -26,43 +26,30 @@ export default {
 </script>
 
 <style lang="scss">
-$hamburger-bar-color: #2980b9;
 $hamgurger-bar-width: 32px;
-$hamgurger-bar-height: 5px;
-$hamgurger-bar-spacing: 5px;
+$hamgurger-bar-height: 4px;
+$hamgurger-bar-spacing: 6px;
 $hamgurger-transition-speed: 0.4s;
 
 .button-hamburger {
   $self: &;
 
   position: relative;
-  border: none;
-  padding: 0;
-  background: none;
-  cursor: pointer;
-  border-radius: 4px;
   width: 50px;
   height: 50px;
-  transition: $hamgurger-transition-speed / 2;
+  cursor: pointer;
+  @include flex-and-center;
 
   &:active {
     transform: scale(0.9);
   }
 
   &__content {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-
-    width: $hamgurger-bar-width;
-    height: ($hamgurger-bar-height * 3) + ($hamgurger-bar-spacing * 2);
-    transition: $hamgurger-transition-speed;
+    width: 32px;
+    transition: 0.3s transform ease-in-out;
   }
 
+  // Set each bar on center
   &__bar {
     display: block;
     position: absolute;
@@ -72,19 +59,20 @@ $hamgurger-transition-speed: 0.4s;
     left: 0;
     margin: auto;
 
-    width: $hamgurger-bar-width;
-    height: $hamgurger-bar-height;
-    background: $hamburger-bar-color;
-    transition: $hamgurger-transition-speed / 2;
-    outline: 1px solid transparent;
+    width: 32px;
+    height: 3px;
+    background: var(--main-color);
+    transition: 0.3s transform ease-in-out;
   }
 
+  // Move up bar 1 
   .bar-1 {
-    transform: rotate(0) translate3d(0, -($hamgurger-bar-height * 2), 0);
+    transform: rotate(0) translate3d(0, -10px, 0);
   }
 
+  // Move down bar 3 
   .bar-3 {
-    transform: rotate(0) translate3d(0, ($hamgurger-bar-height * 2), 0);
+    transform: rotate(0) translate3d(0, 10px, 0);
   }
 
   // Modifiers
