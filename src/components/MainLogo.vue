@@ -21,6 +21,8 @@
 .main-logo {
   --main-logo-h-letter-background: #{$text-color};
 
+  width: 100%;
+  height: 100%;
   animation: 1s appear;
   margin: auto;
 

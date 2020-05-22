@@ -5,7 +5,7 @@
     </div>
 
     <div class="toolbar__hamburguer">
-      <input type="button" value="H" @click="isContentVisible = !isContentVisible" />
+      <ButtonHamburger :active.sync="isContentVisible" />
     </div>
 
     <div class="toolbar__content" :class="{ 'toolbar__content--active': isContentVisible }">
@@ -29,13 +29,15 @@
 <script>
 import MainLogo from "~/components/MainLogo";
 import SwitchDarkMode from "~/components/ui/SwitchDarkMode";
+import ButtonHamburger from "~/components/ui/ButtonHamburger";
 import DropdownLanguage from "~/components/ui/DropdownLanguage";
 
 export default {
   components: {
     MainLogo,
     SwitchDarkMode,
-    DropdownLanguage
+    DropdownLanguage,
+    ButtonHamburger
   },
 
   data() {
@@ -67,7 +69,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 30px;
 
     & img {
       max-width: 100%;
@@ -152,6 +154,12 @@ export default {
 
   @include mq($until: tablet) {
     --toolbar-height: 70px;
+
+    padding: 0 10px;
+
+    &__logo{
+       padding: 10px;
+    }
   }
 }
 </style>
