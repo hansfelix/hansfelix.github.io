@@ -1,7 +1,8 @@
 module.exports = {
   mode: "spa",
+  // srcDir: 'src', 
   generate: {
-    dir: "docs"
+    dir: "dist"
   },
   router: {
     base: "/"
