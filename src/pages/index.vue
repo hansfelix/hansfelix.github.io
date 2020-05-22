@@ -5,6 +5,9 @@
       <h1 class="main-text__title">Hans Felix</h1>
       <div class="main-text__description">{{ $t("index.desciption") }}</div>
     </div>
+
+    <div class="about-me">about me<br />about me<br />about me<br />about me<br />about me<br /></div>
+
     <div class="background">
       <h-icon name="background" width="300" height="300"></h-icon>
     </div>
@@ -42,7 +45,7 @@ export default {
 }
 
 .main-text {
-  height: 100%;
+  height: calc(100vh - 100px);
   max-width: 1000px;
   margin: 0 auto;
   display: flex;

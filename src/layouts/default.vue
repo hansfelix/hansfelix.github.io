@@ -39,7 +39,6 @@ export default {
 
   display: grid;
   grid-template-rows: 100px 1fr;
-  min-height: 100vh;
   color: var(--color-default-layout);
   background-color: var(--background-default-layout);
   transition: 0.2s background ease-in-out;
