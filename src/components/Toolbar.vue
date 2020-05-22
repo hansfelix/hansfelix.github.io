@@ -8,6 +8,9 @@
       <ButtonHamburger :active.sync="isContentVisible" />
     </div>
 
+    <transition name="fade">
+      <div class="toolbar__content__backdrop" @click="isContentVisible = false" v-if="isContentVisible"></div>
+    </transition>
     <div class="toolbar__content" :class="{ 'toolbar__content--active': isContentVisible }">
       <div class="toolbar__nav">
         <a class="toolbar__link" href="#">{{ $t("links.aboutMe") }}</a>
@@ -106,6 +109,16 @@ export default {
       z-index: 200;
     }
 
+    &__backdrop {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(7, 7, 7, 0.6);
+      z-index: 1;
+    }
+
     &--active {
       transform: translateX(0);
     }
@@ -157,8 +170,8 @@ export default {
 
     padding: 0 10px;
 
-    &__logo{
-       padding: 10px;
+    &__logo {
+      padding: 10px;
     }
   }
 }
