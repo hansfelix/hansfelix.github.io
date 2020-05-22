@@ -26,11 +26,6 @@ export default {
 </script>
 
 <style lang="scss">
-$hamgurger-bar-width: 32px;
-$hamgurger-bar-height: 4px;
-$hamgurger-bar-spacing: 6px;
-$hamgurger-transition-speed: 0.4s;
-
 .button-hamburger {
   $self: &;
 
@@ -65,12 +60,12 @@ $hamgurger-transition-speed: 0.4s;
     transition: 0.3s transform ease-in-out;
   }
 
-  // Move up bar 1 
+  // Move up bar 1
   .bar-1 {
     transform: rotate(0) translate3d(0, -10px, 0);
   }
 
-  // Move down bar 3 
+  // Move down bar 3
   .bar-3 {
     transform: rotate(0) translate3d(0, 10px, 0);
   }
