@@ -14,7 +14,7 @@
     <div class="toolbar__content" :class="{ 'toolbar__content--active': isContentVisible }">
       <div class="toolbar__nav">
         <a class="toolbar__link" href="#">{{ $t("links.aboutMe") }}</a>
-        <a class="toolbar__link" href="#">{{ $t("links.work") }}</a>
+        <nuxt-link class="toolbar__link" :to="localePath('works')">{{ $t("links.work") }}</nuxt-link>
       </div>
 
       <div class="toolbar__actions">
