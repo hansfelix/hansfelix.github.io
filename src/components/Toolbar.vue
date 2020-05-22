@@ -98,11 +98,13 @@ export default {
     @include flex-and-center-vertical;
 
     @include mq($until: tablet) {
+      flex-direction: column-reverse;
       position: fixed;
       top: 0;
       right: 0;
       width: 300px;
       height: 100%;
+      padding-top: 60px;
       background: #2c363e;
       transform: translateX(100%);
       transition: 0.25s transform ease-in-out;
@@ -126,6 +128,11 @@ export default {
 
   &__nav {
     flex: 1;
+
+    @include mq($until: tablet) {
+      @include flex-and-center;
+      flex-direction: column;
+    }
   }
 
   &__actions {
@@ -162,6 +169,11 @@ export default {
       background-color: #9494944d;
       height: 3px;
       width: 100%;
+    }
+
+    @include mq($until: tablet) {
+      margin: 0 0 24px 0;
+      font-size: 18px;
     }
   }
 
