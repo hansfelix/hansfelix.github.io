@@ -1,6 +1,6 @@
 # personal-page
 
-> My wicked Nuxt.js project
+> My wicked Nuxt.js project test
 
 ## Build Setup
 
