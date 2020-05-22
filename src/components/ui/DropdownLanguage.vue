@@ -64,6 +64,7 @@ export default {
     background: white;
     white-space: nowrap;
     border-radius: 4px;
+    z-index: 100;
   }
 
   &__menu-item {
