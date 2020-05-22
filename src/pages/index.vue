@@ -39,15 +39,17 @@ export default {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   padding: 10px 150px;
-  margin: 0px auto;
+  margin: 0 auto;
+
+  @include mq($until: tablet) {
+    padding: 10px 25px;
+  }
 }
 
 .main-text {
   height: calc(100vh - 100px);
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,6 +100,11 @@ export default {
     &:hover {
       background-color: #0000001a;
     }
+  }
+
+  @include mq($until: tablet) {
+    position: static;
+    flex-direction: row;
   }
 }
 

@@ -3,7 +3,12 @@
     <div class="toolbar__logo">
       <MainLogo />
     </div>
-    <div class="toolbar__content">
+
+    <div class="toolbar__hamburguer">
+      <input type="button" value="H" @click="isContentVisible = !isContentVisible" />
+    </div>
+
+    <div class="toolbar__content" :class="{ 'toolbar__content--active': isContentVisible }">
       <div class="toolbar__nav">
         <a class="toolbar__link" href="#">{{ $t("links.aboutMe") }}</a>
         <a class="toolbar__link" href="#">{{ $t("links.work") }}</a>
@@ -31,6 +36,12 @@ export default {
     MainLogo,
     SwitchDarkMode,
     DropdownLanguage
+  },
+
+  data() {
+    return {
+      isContentVisible: false
+    };
   }
 };
 </script>
@@ -43,14 +54,16 @@ export default {
 
 .toolbar {
   --link-text-color: #{$text-color};
+  --toolbar-height: 100px;
+
   display: flex;
-  height: 100px;
+  height: var(--toolbar-height);
   box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18), 1px 0 13px -13px #000;
   transition: 0.3s all ease-in-out;
 
   &__logo {
     height: 100%;
-    width: 100px;
+    width: var(--toolbar-height); // to get a square
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,10 +75,38 @@ export default {
     }
   }
 
+  &__hamburguer {
+    display: none;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mq($until: tablet) {
+      display: flex;
+      z-index: 300;
+    }
+  }
+
   &__content {
     flex: 1;
     padding: 0 20px;
     @include flex-and-center-vertical;
+
+    @include mq($until: tablet) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: #2c363e;
+      transform: translateX(100%);
+      transition: 0.25s transform ease-in-out;
+      z-index: 200;
+    }
+
+    &--active {
+      transform: translateX(0);
+    }
   }
 
   &__nav {
@@ -110,25 +151,7 @@ export default {
   }
 
   @include mq($until: tablet) {
-    flex-direction: row;
-    box-shadow: 0px 1px 13px -13px #000, 0 9px 8px -9px rgba(0, 0, 0, 0.18), 0 1px 13px -13px #000;
-
-    &__logo {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-      padding: 10px;
-    }
-
-    &__spacer {
-      display: none;
-    }
-
-    &__dark_mode {
-      order: -1;
-    }
+    --toolbar-height: 70px;
   }
 }
 </style>
