@@ -37,7 +37,6 @@ export default {
 
 <style lang="scss">
 .container {
-  position: relative;
   width: 100%;
   max-width: 1200px;
   padding: 10px 150px;
@@ -72,6 +71,10 @@ export default {
     font-size: 18px;
     line-height: 1.4;
   }
+}
+
+.about-me {
+  min-height: 100vh;
 }
 
 .social {
@@ -111,7 +114,8 @@ export default {
 .background {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 100vh;
+  transform: translateY(-100%);
   opacity: 0.08;
 }
 </style>
