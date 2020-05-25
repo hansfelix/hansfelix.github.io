@@ -8,8 +8,8 @@
 
     <div class="about-me">
       <div class="about-me__text">
-        <h1 style="color: #6495B5">{{ $t("index.aboutMe") }}</h1>
-        <div v-html="$t('index.aboutMeText')"> </div>
+        <h2 class="about-me__title">{{ $t("index.aboutMe") }}</h2>
+        <div v-html="$t('index.aboutMeText')"></div>
 
         <section class="about-me__tech">
           <div>JavaScript</div>
@@ -56,7 +56,7 @@ export default {
 .container {
   width: 100%;
   max-width: 1300px;
-  padding: 10px 150px;
+  padding: 0 150px;
   margin: 0 auto;
 
   @include mq($until: tablet) {
@@ -116,10 +116,18 @@ export default {
   &__text {
     align-self: center;
     justify-self: center;
+    font-size: 17px;
+    line-height: 1.4;
 
     p {
       margin-bottom: 15px;
     }
+  }
+
+  &__title {
+    color: #6495b5;
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
 
   &__tech {
