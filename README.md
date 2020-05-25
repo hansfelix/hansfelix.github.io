@@ -2,6 +2,8 @@
 
 > My wicked Nuxt.js project test
 
+![view](https://github.com/hansfelix/hansfelix.github.io/raw/master/src/static/images/view.PNG)
+
 ## Build Setup
 
 ```bash
