@@ -105,10 +105,15 @@ export default {
       filter: grayscale(1);
       opacity: 0.75;
       transition: 0.2s all ease-in-out;
+    }
 
-      &:hover {
-        filter: grayscale(0.5);
-        opacity: 0.9;
+    @include mq($until: tablet) {
+      grid-row-start: 1;
+      justify-self: center;
+
+      img {
+        max-width: 150px;
+        margin: 10px;
       }
     }
   }
@@ -140,6 +145,15 @@ export default {
       content: "-";
       margin-right: 5px;
     }
+
+    @include mq($until: tablet) {
+    grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include mq($until: tablet) {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1;
   }
 }
 
