@@ -8,14 +8,20 @@
 
     <div class="about-me">
       <div class="about-me__text">
-        Hello! I'm Brittany, a software engineer based in Boston, MA. I enjoy creating things that live on the internet, whether that be websites,
-        applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences. Shortly after
-        graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and
-        meaningful projects on a daily basis. Here are a few technologies I've been working with recently:
+        <h1 style="color: #6495B5">{{ $t("index.aboutMe") }}</h1>
+        <div v-html="$t('index.aboutMeText')"> </div>
+
+        <section class="about-me__tech">
+          <div>JavaScript</div>
+          <div>HTML & (S)CSS</div>
+          <div>Vue</div>
+          <div>Node.js</div>
+          <div>C#</div>
+          <div>WordPress</div>
+        </section>
       </div>
       <div class="about-me__photo">
-
-        <img src="/images/hans-felix.jpg" alt="Hans Felix">
+        <img src="/images/hans-felix.jpg" alt="Hans Felix" />
       </div>
     </div>
 
@@ -49,7 +55,7 @@ export default {
 <style lang="scss">
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   padding: 10px 150px;
   margin: 0 auto;
 
@@ -88,11 +94,44 @@ export default {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 60% 40%;
-  align-self: center;
+
+  &__photo {
+    align-self: center;
+    justify-self: end;
+
+    img {
+      max-width: 250px;
+      border-radius: 50%;
+      filter: grayscale(1);
+      opacity: 0.75;
+      transition: 0.2s all ease-in-out;
+
+      &:hover {
+        filter: grayscale(0.5);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__text {
+    align-self: center;
     justify-self: center;
 
-  img{
-    max-width: 250px;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__tech {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+
+    //TODO: Add custom class for this div
+    div:before {
+      content: "-";
+      margin-right: 5px;
+    }
   }
 }
 
