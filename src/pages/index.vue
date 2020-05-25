@@ -6,7 +6,18 @@
       <div class="main-text__description">{{ $t("index.desciption") }}</div>
     </div>
 
-    <div class="about-me">about me<br />about me<br />about me<br />about me<br />about me<br /></div>
+    <div class="about-me">
+      <div class="about-me__text">
+        Hello! I'm Brittany, a software engineer based in Boston, MA. I enjoy creating things that live on the internet, whether that be websites,
+        applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences. Shortly after
+        graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and
+        meaningful projects on a daily basis. Here are a few technologies I've been working with recently:
+      </div>
+      <div class="about-me__photo">
+
+        <img src="/images/hans-felix.jpg" alt="Hans Felix">
+      </div>
+    </div>
 
     <div class="background">
       <h-icon name="background" width="300" height="300"></h-icon>
@@ -75,6 +86,14 @@ export default {
 
 .about-me {
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-self: center;
+    justify-self: center;
+
+  img{
+    max-width: 250px;
+  }
 }
 
 .social {
