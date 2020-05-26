@@ -43,6 +43,10 @@
         <h-icon name="github" width="20" height="20"> </h-icon>
       </a>
     </div>
+
+    <footer>
+      footer
+    </footer>
   </div>
 </template>
 
