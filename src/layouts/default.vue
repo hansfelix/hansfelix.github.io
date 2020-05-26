@@ -37,8 +37,7 @@ export default {
   --background-default-layout: #f8f8f8;
   --color-default-layout: #{$text-color};
 
-  display: grid;
-  grid-template-rows: 100px 1fr;
+
   color: var(--color-default-layout);
   background-color: var(--background-default-layout);
   transition: 0.2s background ease-in-out;
