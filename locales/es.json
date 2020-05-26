@@ -1,14 +1,15 @@
 {
-    "links": {
-      "aboutMe": "Sobre mi",
-      "work": "Portafolio"
-    },
-    "ui": {
-      "darkMode": "Modo Oscuro"
-    },
-    "index": {
-      "overline": "¡Hola! Mi nombre es",
-      "desciption": "Soy un desarrollador de software radicado en Perú, me especializo en la creación de sitios web excepcionales. Ocasionalmente diseño. Apasionado por combinar un código limpio con un diseño increíble."
-    }
+  "links": {
+    "aboutMe": "Sobre mi",
+    "work": "Portafolio"
+  },
+  "ui": {
+    "darkMode": "Modo Oscuro"
+  },
+  "index": {
+    "overline": "¡Hola! Mi nombre es",
+    "desciption": "Soy un desarrollador de software radicado en Perú, me especializo en la creación de sitios web excepcionales. Ocasionalmente diseño. Apasionado por combinar un código limpio con un diseño increíble.",
+    "aboutMe": "Sobre mi",
+    "aboutMeText": "<p>¡Hola! Soy Hans Felix, un desarrollador de software radicado en Perú. </p><p>Mi objetivo es crear aplicaciones webs que ayuden a las empresas a cumplir sus objetivos empresariales, cuidando la interfaz y la experiencia de usuario. </p><p>Estos últimos años he estado ayudando a las empresas del sector construcción a digitalizar procesos mediante la creación de aplicaciones. </p><p>Algunas tecnologías con las que he trabajado recientemente:</p>"
   }
-  
+}
