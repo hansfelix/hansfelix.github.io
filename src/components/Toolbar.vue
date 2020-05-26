@@ -61,6 +61,8 @@ export default {
   --link-text-color: #{$text-color};
   --toolbar-height: 100px;
 
+  position: fixed;
+  width: 100%;
   display: flex;
   height: var(--toolbar-height);
   box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18), 1px 0 13px -13px #000;
