@@ -12,7 +12,7 @@
 export default {
   props: {
     active: {
-      type: String,
+      type: Boolean,
       default: false
     }
   },
