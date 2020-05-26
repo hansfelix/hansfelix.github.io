@@ -37,10 +37,9 @@ export default {
   --background-default-layout: #f8f8f8;
   --color-default-layout: #{$text-color};
 
-
   color: var(--color-default-layout);
   background-color: var(--background-default-layout);
-  transition: 0.2s background ease-in-out;
+  transition: var(--main-transition);
 
   @include mq($until: tablet) {
   }

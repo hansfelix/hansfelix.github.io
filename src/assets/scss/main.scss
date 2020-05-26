@@ -2,12 +2,25 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+// Deafult variables
 :root {
+  // Colors
   --main-color: #6495b5;
+  --main-background-color: #f8f8f8;
 
+  // Sizes
   --toolbar-height: 100px;
+
+  // Others
+  --main-transition: 0.25s all ease-in-out;
 }
 
+// Variables on Dark Mode
+.dark-mode {
+  --main-background-color: #1a252e;
+}
+
+// Variables on Mobile
 @include mq($until: tablet) {
   :root {
     --toolbar-height: 70px;

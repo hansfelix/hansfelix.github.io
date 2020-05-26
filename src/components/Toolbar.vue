@@ -1,5 +1,5 @@
 <template>
-  <section class="toolbar">
+  <section class="toolbar" :class="classToolbar">
     <div class="toolbar__logo">
       <MainLogo />
     </div>
@@ -45,8 +45,35 @@ export default {
 
   data() {
     return {
-      isContentVisible: false
+      isContentVisible: false,
+      compressed: false
     };
+  },
+
+  computed: {
+    classToolbar() {
+      return {
+        "toolbar--compressed": this.compressed
+      };
+    }
+  },
+
+  methods: {
+    handleScroll(e) {
+      var currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos > 20) {
+        this.compressed = true;
+      } else {
+        this.compressed = false;
+      }
+
+      // console.log('this', e)
+    }
+  },
+
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
   }
 };
 </script>
@@ -59,14 +86,15 @@ export default {
 
 .toolbar {
   --link-text-color: #{$text-color};
-  --toolbar-height: 100px;
 
   position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   height: var(--toolbar-height);
+  background-color: var(--main-background-color);
   box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18), 1px 0 13px -13px #000;
-  transition: 0.3s all ease-in-out;
+  transition: var(--main-transition);
 
   &__logo {
     height: 100%;
@@ -180,13 +208,18 @@ export default {
   }
 
   @include mq($until: tablet) {
-    --toolbar-height: 70px;
-
     padding: 0 10px;
 
     &__logo {
       padding: 10px;
     }
+  }
+}
+
+// Modifiers
+.toolbar {
+  &--compressed {
+    --toolbar-height: 70px;
   }
 }
 </style>

@@ -69,7 +69,8 @@ export default {
 }
 
 .main-text {
-  height: calc(100vh - 100px);
+  height: calc(100vh - var(--toolbar-height));
+  margin-top: var(--toolbar-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +93,8 @@ export default {
     font-size: 18px;
     line-height: 1.4;
   }
+
+
 }
 
 .about-me {
@@ -151,7 +154,7 @@ export default {
     }
 
     @include mq($until: tablet) {
-    grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
