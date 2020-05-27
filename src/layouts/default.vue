@@ -40,6 +40,7 @@ export default {
   color: var(--color-default-layout);
   background-color: var(--background-default-layout);
   transition: var(--main-transition);
+  overflow: hidden;
 
   @include mq($until: tablet) {
   }
