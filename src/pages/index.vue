@@ -93,8 +93,6 @@ export default {
     font-size: 18px;
     line-height: 1.4;
   }
-
-
 }
 
 .about-me {
@@ -195,12 +193,15 @@ export default {
   @include mq($until: tablet) {
     position: static;
     flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0 0px;
   }
 }
 
-.footer{
+.footer {
   min-height: 50px;
-  @include flex-and-center
+  @include flex-and-center;
 }
 
 .background {
