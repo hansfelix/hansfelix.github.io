@@ -94,10 +94,11 @@ export default {
   height: var(--toolbar-height);
   background-color: var(--main-background-color);
   transition: var(--main-transition);
+  z-index: 10;
 
   &__logo {
     height: 100%;
-    width: var(--toolbar-height); // to get a square
+    width: 100px; // to get a square width: 100px
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,8 +106,12 @@ export default {
     transition: var(--main-transition);
 
     & svg {
-      max-width: 10px;
-      max-height: 10px;
+      max-width: 40px;
+      max-height: 40px;
+    }
+
+    @include mq($until: tablet) {
+      width: var(--toolbar-height);
     }
   }
 
@@ -221,7 +226,7 @@ export default {
   &--compressed {
     --toolbar-height: 70px;
 
-    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.2);
   }
 }
 </style>
