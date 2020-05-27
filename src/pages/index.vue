@@ -44,8 +44,8 @@
       </a>
     </div>
 
-    <footer>
-      footer
+    <footer class="footer">
+      &copy; Hans Felix
     </footer>
   </div>
 </template>
@@ -196,6 +196,11 @@ export default {
     position: static;
     flex-direction: row;
   }
+}
+
+.footer{
+  min-height: 50px;
+  @include flex-and-center
 }
 
 .background {
