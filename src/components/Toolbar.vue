@@ -93,7 +93,6 @@ export default {
   display: flex;
   height: var(--toolbar-height);
   background-color: var(--main-background-color);
-  box-shadow: 1px 0px 13px -13px #000, 9px 0 8px -9px rgba(0, 0, 0, 0.18), 1px 0 13px -13px #000;
   transition: var(--main-transition);
 
   &__logo {
@@ -102,11 +101,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    // padding: 30px;
+    transition: var(--main-transition);
 
-    & img {
-      max-width: 100%;
-      max-height: 100%;
+    & svg {
+      max-width: 10px;
+      max-height: 10px;
     }
   }
 
@@ -220,6 +220,8 @@ export default {
 .toolbar {
   &--compressed {
     --toolbar-height: 70px;
+
+    box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.20);
   }
 }
 </style>
