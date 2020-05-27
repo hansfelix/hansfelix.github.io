@@ -55,7 +55,9 @@ module.exports = {
     // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
     "nuxt-i18n",
     // Doc: https://github.com/nuxt-community/svg-module
-    "@nuxtjs/svg"
+    "@nuxtjs/svg",
+    // Doc: https://github.com/rigor789/vue-scrollto
+    'vue-scrollto/nuxt'
   ],
   /*
    ** Axios module configuration

@@ -6,7 +6,7 @@
       <div class="main-text__description">{{ $t("index.desciption") }}</div>
     </div>
 
-    <div class="about-me">
+    <div class="about-me" id="element">
       <div class="about-me__text">
         <h2 class="about-me__title">{{ $t("index.aboutMe") }}</h2>
         <div v-html="$t('index.aboutMeText')"></div>
