@@ -22,3 +22,11 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## 🎨 Palette outline
+| Color           | Hex                                                                |
+| --------------- | ------------------------------------------------------------------ |
+| Main Color      | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
+| secondary color | ![#172a45](https://via.placeholder.com/10/0a192f?text=+) `#172a45` |
+| Accent color    | ![#6495b5](https://via.placeholder.com/10/6495b5?text=+) `#6495b5` |
