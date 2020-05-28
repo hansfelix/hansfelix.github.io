@@ -56,7 +56,7 @@ export default {
 
     width: 32px;
     height: 3px;
-    background: var(--main-color);
+    background: var(--accent-color);
     transition: 0.3s transform ease-in-out;
   }
 
