@@ -140,7 +140,7 @@ export default {
       width: 300px;
       height: 100%;
       padding-top: 60px;
-      background: #2c363e;
+      background: var(--main-color);
       transform: translateX(100%);
       transition: 0.25s transform ease-in-out;
       z-index: 200;
