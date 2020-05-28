@@ -5,7 +5,7 @@ body {
 // Deafult variables
 :root {
   // Colors
-  --main-color: TBD;
+  --main-color: #F8F8F8;
   --secondary-color: TBD;
   --accent-color: #6495b5;
   --main-background-color: #f8f8f8;
@@ -19,6 +19,12 @@ body {
 
 // Variables on Dark Mode
 .dark-mode {
+  // Colors
+  --main-color: #1a252e;
+  --secondary-color: TBD;
+  --accent-color: #6495b5;
+
+
   --main-background-color: #1a252e;
 }
 
