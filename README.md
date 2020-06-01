@@ -31,3 +31,12 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 | Secondary    | ![#172a45](https://via.placeholder.com/10/0a192f?text=+) `#172a45` |
 | Accent       | ![#6495b5](https://via.placeholder.com/10/6495b5?text=+) `#6495b5` |
 | Text         | ![#6495b5](https://via.placeholder.com/10/6495b5?text=+) `#404040` |
+
+### Dark mode
+
+| Color        | Hex                                                                |
+| -------------| ------------------------------------------------------------------ |
+| Main         | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) `#0a192f` |
+| Secondary    | ![#172a45](https://via.placeholder.com/10/0a192f?text=+) `#172a45` |
+| Accent       | ![#6495b5](https://via.placeholder.com/10/6495b5?text=+) `#6495b5` |
+| Text         | ![#6495b5](https://via.placeholder.com/10/6495b5?text=+) `#404040` |
