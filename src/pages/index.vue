@@ -25,6 +25,8 @@
       </div>
     </div>
 
+    <IndexContact />
+
     <div class="background">
       <h-icon name="background" width="300" height="300"></h-icon>
     </div>
@@ -51,8 +53,12 @@
 </template>
 
 <script>
+import IndexContact from "@/components/index/IndexContact";
+
 export default {
-  components: {}
+  components: {
+    IndexContact
+  }
 };
 </script>
 
