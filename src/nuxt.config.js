@@ -1,6 +1,6 @@
 module.exports = {
   mode: "spa",
-  // srcDir: 'src', 
+  // srcDir: 'src',
   generate: {
     dir: "dist"
   },
@@ -11,11 +11,13 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Hans Felix",
+    title: "Hans Felix | Software Developer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: process.env.npm_package_description || "" }
+      { hid: "description", name: "description", content: process.env.npm_package_description || "" },
+      { hid: "og:title", name: "og:title", content: "Hans Felix | Software Developer" },
+      { hid: "og:url", name: "og:url", content: "https://hansfelix.github.io/" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
@@ -57,7 +59,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/svg-module
     "@nuxtjs/svg",
     // Doc: https://github.com/rigor789/vue-scrollto
-    'vue-scrollto/nuxt'
+    "vue-scrollto/nuxt"
   ],
   /*
    ** Axios module configuration
