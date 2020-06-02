@@ -19,7 +19,7 @@ module.exports = {
       { hid: "og:title", name: "og:title", content: "Hans Felix | Software Developer" },
       { hid: "og:url", name: "og:url", content: "https://hansfelix.github.io/" },
       { hid: "og:description", name: "og:description", content: "I am an experienced software developer based in Peru, specializing in building exceptional websites." },
-      { hid: "og:image", name: "og:image", content: "/images/view.png" },
+      { hid: "og:image", name: "og:image", content: "/view.PNG" },
       { hid: "og:type", name: "og:type", content: "website" },
       { hid: "og:locale", name: "og:locale", content: "en_US" },
       { hid: "og:locale:alternate", name: "og:locale:alternate", content: "es_ES" },
