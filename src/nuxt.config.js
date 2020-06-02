@@ -20,6 +20,7 @@ module.exports = {
       { hid: "og:url", name: "og:url", content: "https://hansfelix.github.io/" },
       { hid: "og:description", name: "og:description", content: "I am an experienced software developer based in Peru, specializing in building exceptional websites." },
       { hid: "og:image", name: "og:image", content: "/images/view.png" },
+      { hid: "og:type", name: "og:type", content: "website" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
