@@ -18,7 +18,8 @@ module.exports = {
       { hid: "description", name: "description", content: "I am an experienced software developer based in Peru, specializing in building exceptional websites." },
       { hid: "og:title", name: "og:title", content: "Hans Felix | Software Developer" },
       { hid: "og:url", name: "og:url", content: "https://hansfelix.github.io/" },
-      { hid: "og:description", name: "og:description", content: "I am an experienced software developer based in Peru, specializing in building exceptional websites." }
+      { hid: "og:description", name: "og:description", content: "I am an experienced software developer based in Peru, specializing in building exceptional websites." },
+      { hid: "og:url", name: "og:url", content: "/images/view.png" },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
