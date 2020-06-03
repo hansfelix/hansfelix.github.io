@@ -64,7 +64,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/svg-module
     "@nuxtjs/svg",
     // Doc: https://github.com/rigor789/vue-scrollto
-    "vue-scrollto/nuxt"
+    "vue-scrollto/nuxt",
+    // Doc: https://github.com/nuxt-community/analytics-module#readme
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Axios module configuration
@@ -103,7 +105,9 @@ module.exports = {
       cookieKey: "i18n_redirected"
     }
   },
-
+  googleAnalytics: {
+    id: 'UA-168575030-1',
+  },
   vue: {
     config: {
       productionTip: false,
