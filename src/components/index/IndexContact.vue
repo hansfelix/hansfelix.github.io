@@ -1,8 +1,8 @@
 <template>
-  <section class="index-contact">
+  <section class="index-contact" id="contact">
     <div class="index-contact__content">
-      <p class="index-contact__pre-title">Interested in <br> working together?</p>
       <h2 class="index-contact__title">Get in touch!</h2>
+      <p class="index-contact__pre-title">Interested in working together?</p>
       <p class="index-contact__text">
         If you wanna get in touch, talk to me about a project collaboration or just say hi, send me an email to hansfelixramos@gmail.com I'll try my
         best to get back to you! We can also be in contact through any of my social networks
@@ -30,7 +30,7 @@ export default {};
   }
   &__title {
     color: #6495b5;
-    font-size: 1.85em;
+    font-size: 2em;
     margin-bottom: 15px;
   }
 

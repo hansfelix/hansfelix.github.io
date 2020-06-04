@@ -15,7 +15,7 @@
       <div class="toolbar__nav">
         <a class="toolbar__link" href="#" v-scroll-to="'#element'">{{ $t("links.aboutMe") }}</a>
         <!-- <nuxt-link class="toolbar__link" :to="localePath('works')">{{ $t("links.work") }}</nuxt-link> -->
-        <a class="toolbar__link" href="#" v-scroll-to="'#element'">{{ $t("links.contact") }}</a>
+        <a class="toolbar__link" href="#" v-scroll-to="'#contact'">{{ $t("links.contact") }}</a>
       </div>
 
       <div class="toolbar__actions">
