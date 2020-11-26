@@ -31,6 +31,7 @@ export default {
 .dark-mode.default-layout {
   --background-default-layout: #1a252e;
   --color-default-layout: #{$text-color-dark};
+  --constrast-background-color-25: rgb(256, 256, 256, 0.1);
 }
 
 .default-layout {

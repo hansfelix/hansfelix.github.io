@@ -5,10 +5,14 @@ body {
 // Deafult variables
 :root {
   // Colors
-  --main-color: #F8F8F8;
+  --main-color: #f8f8f8;
   --secondary-color: TBD;
   --accent-color: #6495b5;
   --main-background-color: #f8f8f8;
+  --constrast-background-color-50: rgb(0, 0, 0, 0.5); 
+  --constrast-background-color-25: rgb(0, 0, 0, 0.1); 
+
+  //card
 
   // Sizes
   --toolbar-height: 100px;
@@ -23,7 +27,6 @@ body {
   --main-color: #1a252e;
   --secondary-color: TBD;
   --accent-color: #6495b5;
-
 
   --main-background-color: #1a252e;
 }

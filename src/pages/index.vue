@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="main-text">
-      <div class="main-text__overline">{{ $t("index.overline") }}</div>
+      <div class="main-text__overline">{{ $t('index.overline') }}</div>
       <h1 class="main-text__title">Hans Felix</h1>
-      <div class="main-text__description">{{ $t("index.desciption") }}</div>
+      <div class="main-text__description">{{ $t('index.desciption') }}</div>
     </div>
 
     <div class="about-me" id="element">
       <div class="about-me__text">
-        <h2 class="about-me__title">{{ $t("index.aboutMe") }}</h2>
+        <h2 class="about-me__title">{{ $t('index.aboutMe') }}</h2>
         <div v-html="$t('index.aboutMeText')"></div>
 
         <section class="about-me__tech">
@@ -25,6 +25,7 @@
       </div>
     </div>
 
+    <Portfolio />
     <IndexContact />
 
     <div class="background">
@@ -32,33 +33,49 @@
     </div>
 
     <div class="social">
-      <a class="social__item" href="https://www.linkedin.com/in/hans-felix/" target="_blank">
+      <a
+        class="social__item"
+        href="https://www.linkedin.com/in/hans-felix/"
+        target="_blank"
+      >
         <h-icon name="linkedin" width="20" height="20"></h-icon>
       </a>
-      <a class="social__item" href="https://twitter.com/hansfelixramos" target="_blank">
+      <a
+        class="social__item"
+        href="https://twitter.com/hansfelixramos"
+        target="_blank"
+      >
         <h-icon name="twitter" width="20" height="20"></h-icon>
       </a>
-      <a class="social__item" href="https://stackoverflow.com/users/9176232/hans-felix-ramos?tab=profile" target="_blank">
+      <a
+        class="social__item"
+        href="https://stackoverflow.com/users/9176232/hans-felix-ramos?tab=profile"
+        target="_blank"
+      >
         <h-icon name="stackoverflow" width="20" height="20"> </h-icon>
       </a>
-      <a class="social__item" href="https://github.com/hansfelix" target="_blank">
+      <a
+        class="social__item"
+        href="https://github.com/hansfelix"
+        target="_blank"
+      >
         <h-icon name="github" width="20" height="20"> </h-icon>
       </a>
     </div>
 
-    <footer class="footer">
-      &copy; Hans Felix
-    </footer>
+    <footer class="footer">&copy; Hans Felix</footer>
   </div>
 </template>
 
 <script>
-import IndexContact from "@/components/index/IndexContact";
+import IndexContact from '@/components/index/IndexContact';
+import Portfolio from '@/components/index/Portfolio';
 
 export default {
   components: {
-    IndexContact
-  }
+    IndexContact,
+    Portfolio,
+  },
 };
 </script>
 
@@ -83,7 +100,7 @@ export default {
 
   &__overline {
     color: $main-color;
-    font-family: "Inconsolata", monospace;
+    font-family: 'Inconsolata', monospace;
     font-size: 20px;
   }
 
@@ -153,7 +170,7 @@ export default {
 
     //TODO: Add custom class for this div
     div:before {
-      content: "-";
+      content: '-';
       margin-right: 5px;
     }
 
