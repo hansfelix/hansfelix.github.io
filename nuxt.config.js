@@ -44,7 +44,9 @@ export default {
     // https://github.com/nuxt-community/style-resources-module/    
     '@nuxtjs/style-resources',
     // https://google-fonts.nuxtjs.org/setup
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    // https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode'
   ],
 
   styleResources: {

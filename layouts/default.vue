@@ -6,8 +6,9 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import Toolbar from "~/components/Toolbar";
+import { mapGetters } from 'vuex'
+import Toolbar from '~/components/Toolbar'
+
 export default {
   components: {
     Toolbar
@@ -15,16 +16,16 @@ export default {
 
   computed: {
     ...mapGetters({
-      isDarkMode: "settings/isDarkMode"
+      isDarkMode: 'settings/isDarkMode'
     }),
 
-    classDarkMode() {
+    classDarkMode () {
       return {
-        "dark-mode": this.isDarkMode
-      };
+        'dark-mode': this.isDarkMode
+      }
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -48,14 +49,14 @@ export default {
 }
 
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
 }
 
 *,
