@@ -1,0 +1,18 @@
+/*
+ * DOCS: https://github.com/sass-mq/sass-mq
+ */
+ $mq-breakpoints: (
+    //xs
+      mobile: 320px,
+    //sm
+      tablet: 740px,
+    //md
+      wide: 980px,
+    //lg
+      desktop: 1200px,
+    //xl
+      big-desktop: 1600px
+  );
+  
+  @import "~sass-mq";
+  
