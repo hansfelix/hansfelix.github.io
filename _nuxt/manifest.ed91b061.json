@@ -1,6 +1,7 @@
 {
   "name": "personal-page",
   "short_name": "personal-page",
+  "description": "## Build Setup",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.e3e9fb.png",
