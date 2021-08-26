@@ -48,18 +48,6 @@ export default {
   }
 }
 
-html {
-  font-family: Segoe UI, system-ui, -apple-system, sans-serif;
-  font-size: 100%;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 .button--green {
   display: inline-block;
   border-radius: 4px;

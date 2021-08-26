@@ -1,16 +1,26 @@
-body {
-  font-family: "DM Sans", sans-serif;
+html {
+  font-family: Segoe UI, system-ui, -apple-system, sans-serif;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 // Deafult variables
 :root {
   // Colors
+  --primary-color: #6495b5;
   --main-color: #f8f8f8;
   --secondary-color: TBD;
   --accent-color: #6495b5;
   --main-background-color: #f8f8f8;
-  --constrast-background-color-50: rgb(0, 0, 0, 0.5); 
-  --constrast-background-color-25: rgb(0, 0, 0, 0.1); 
+  --constrast-background-color-50: rgb(0, 0, 0, 0.5);
+  --constrast-background-color-25: rgb(0, 0, 0, 0.1);
+  --text-color: #6c6c6c;
 
   //card
 
@@ -27,6 +37,7 @@ body {
   --main-color: #1a252e;
   --secondary-color: TBD;
   --accent-color: #6495b5;
+  --text-color: #94a2ad;
 
   --main-background-color: #1a252e;
 }

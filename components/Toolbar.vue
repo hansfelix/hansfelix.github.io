@@ -1,7 +1,7 @@
 <template>
   <section class="toolbar" :class="classToolbar">
     <div class="toolbar__logo">
-      <MainLogo />
+      <SiteLogo />
     </div>
 
     <div class="toolbar__hamburguer">
@@ -9,13 +9,24 @@
     </div>
 
     <transition name="fade">
-      <div class="toolbar__content__backdrop" @click="isContentVisible = false" v-if="isContentVisible"></div>
+      <div
+        class="toolbar__content__backdrop"
+        @click="isContentVisible = false"
+        v-if="isContentVisible"
+      ></div>
     </transition>
-    <div class="toolbar__content" :class="{ 'toolbar__content--active': isContentVisible }">
+    <div
+      class="toolbar__content"
+      :class="{ 'toolbar__content--active': isContentVisible }"
+    >
       <div class="toolbar__nav">
-        <a class="toolbar__link" href="#" v-scroll-to="'#element'">{{ $t("links.aboutMe") }}</a>
+        <a class="toolbar__link" href="#" v-scroll-to="'#element'">{{
+          $t('links.aboutMe')
+        }}</a>
         <!-- <nuxt-link class="toolbar__link" :to="localePath('works')">{{ $t("links.work") }}</nuxt-link> -->
-        <a class="toolbar__link" href="#" v-scroll-to="'#contact'">{{ $t("links.contact") }}</a>
+        <a class="toolbar__link" href="#" v-scroll-to="'#contact'">{{
+          $t('links.contact')
+        }}</a>
       </div>
 
       <div class="toolbar__actions">
@@ -31,52 +42,52 @@
 </template>
 
 <script>
-import MainLogo from "~/components/MainLogo";
-import SwitchDarkMode from "~/components/ui/SwitchDarkMode";
-import ButtonHamburger from "~/components/ui/ButtonHamburger";
-import DropdownLanguage from "~/components/ui/DropdownLanguage";
+import SiteLogo from '~/components/icons/SiteLogo'
+import SwitchDarkMode from '~/components/ui/SwitchDarkMode'
+import ButtonHamburger from '~/components/ui/ButtonHamburger'
+import DropdownLanguage from '~/components/ui/DropdownLanguage'
 
 export default {
   components: {
-    MainLogo,
+    SiteLogo,
     SwitchDarkMode,
     DropdownLanguage,
     ButtonHamburger
   },
 
-  data() {
+  data () {
     return {
       isContentVisible: false,
       compressed: false
-    };
+    }
   },
 
   computed: {
-    classToolbar() {
+    classToolbar () {
       return {
-        "toolbar--compressed": this.compressed
-      };
+        'toolbar--compressed': this.compressed
+      }
     }
   },
 
   methods: {
-    handleScroll(e) {
-      var currentScrollPos = window.pageYOffset;
+    handleScroll (e) {
+      const currentScrollPos = window.pageYOffset
 
       if (currentScrollPos > 20) {
-        this.compressed = true;
+        this.compressed = true
       } else {
-        this.compressed = false;
+        this.compressed = false
       }
 
       // console.log('this', e)
     }
   },
 
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -198,7 +209,7 @@ export default {
     text-decoration: none;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
