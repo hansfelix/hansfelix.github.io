@@ -4,4 +4,7 @@
 # Nuxt generate
 dist
 
+# Service worker
+sw.*
+
 node_modules
