@@ -85,7 +85,8 @@ export default {
   },
 
   created () {
-    window.addEventListener('scroll', this.handleScroll)
+    // TODO:
+    // window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -104,7 +105,7 @@ export default {
   width: 100%;
   display: flex;
   height: var(--toolbar-height);
-  background-color: var(--main-background-color);
+  background-color: var(--background-color);
   transition: var(--main-transition);
   z-index: 10;
 

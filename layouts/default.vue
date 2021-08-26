@@ -1,12 +1,11 @@
 <template>
-  <section class="default-layout" :class="classDarkMode">
+  <section class="default-layout">
     <toolbar />
     <nuxt />
   </section>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Toolbar from '~/components/Toolbar'
 
 export default {
@@ -14,33 +13,18 @@ export default {
     Toolbar
   },
 
-  computed: {
-    ...mapGetters({
-      isDarkMode: 'settings/isDarkMode'
-    }),
-
-    classDarkMode () {
-      return {
-        'dark-mode': this.isDarkMode
-      }
-    }
-  }
+  computed: {}
 }
 </script>
 
 <style lang="scss">
 .dark-mode.default-layout {
-  --background-default-layout: #1a252e;
-  --color-default-layout: #{$text-color-dark};
   --constrast-background-color-25: rgb(256, 256, 256, 0.1);
 }
 
 .default-layout {
-  --background-default-layout: #f8f8f8;
-  --color-default-layout: #{$text-color};
-
-  color: var(--color-default-layout);
-  background-color: var(--background-default-layout);
+  color: var(--text-color);
+  background-color: var(--background-color);
   transition: var(--main-transition);
   overflow: hidden;
 

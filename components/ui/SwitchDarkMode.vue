@@ -1,5 +1,9 @@
 <template>
-  <section class="switch-dark-mode" :class="classSwitchDarkMode">
+  <section
+    class="switch-dark-mode"
+    :class="classSwitchDarkMode"
+    @click="toogleDarkMode"
+  >
     <div class="switch-dark-mode__icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
@@ -8,7 +12,7 @@
       </svg>
     </div>
     <span class="switch-dark-mode__text">{{ $t('ui.darkMode') }}</span>
-    <div class="switch-dark-mode__control" @click="toogleDarkMode">
+    <div class="switch-dark-mode__control">
       <div class="switch-dark-mode__circle" type="checkbox" />
       <div class="switch-dark-mode__bar" type="checkbox" />
     </div>
@@ -16,29 +20,22 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import rawMoon from '~/assets/icons/moon.svg?raw'
-
 export default {
-  data () {
-    return { rawMoon }
-  },
-
   computed: {
-    ...mapGetters({
-      isDarkMode: 'settings/isDarkMode'
-    }),
-
     classSwitchDarkMode () {
       return {
-        'switch-dark-mode--active': this.isDarkMode
+        'switch-dark-mode--active': this.$colorMode.preference === 'dark'
       }
     }
   },
 
   methods: {
     toogleDarkMode () {
-      this.$store.commit('settings/toogleIsDarkMode')
+      if (this.$colorMode.preference === 'dark') {
+        this.$colorMode.preference = 'light'
+      } else {
+        this.$colorMode.preference = 'dark'
+      }
     }
   }
 }
