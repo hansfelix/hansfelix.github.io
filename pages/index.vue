@@ -2,7 +2,7 @@
   <div class="container">
     <div class="main-text">
       <div class="main-text__overline">{{ $t("index.overline") }}</div>
-      <h1 class="main-text__title">Hans Felix (test)</h1>
+      <h1 class="main-text__title">Hans Felix</h1>
       <div class="main-text__description">{{ $t("index.desciption") }}</div>
     </div>
 
