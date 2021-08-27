@@ -20,13 +20,9 @@
       :class="{ 'toolbar__content--active': isContentVisible }"
     >
       <div class="toolbar__nav">
-        <a class="toolbar__link" href="#" v-scroll-to="'#element'">{{
-          $t('links.aboutMe')
-        }}</a>
-        <!-- <nuxt-link class="toolbar__link" :to="localePath('works')">{{ $t("links.work") }}</nuxt-link> -->
-        <a class="toolbar__link" href="#" v-scroll-to="'#contact'">{{
-          $t('links.contact')
-        }}</a>
+        <NuxtLink class="toolbar__link" to="#element">{{ $t("links.aboutMe") }}</NuxtLink>
+        <NuxtLink class="toolbar__link" to="#portfolio">{{ $t("links.portfolio") }}</NuxtLink>
+        <NuxtLink class="toolbar__link" to="#contact">{{ $t("links.contact") }}</NuxtLink>
       </div>
 
       <div class="toolbar__actions">
