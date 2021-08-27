@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio-section">
+  <div class="section portfolio-section" id="portfolio">
     <h2 class="index-contact__title">Projects</h2>
     <p class="index-contact__text">
       If you wanna get in touch, talk to me about a project collaboration or
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       projects: [
         {
@@ -28,7 +28,7 @@ export default {
           img: 'https://via.placeholder.com/350x150',
           description: '',
           link: '',
-          githubRepo: '',
+          githubRepo: ''
         },
         {
           id: '1',
@@ -36,7 +36,7 @@ export default {
           img: 'https://via.placeholder.com/350x150',
           description: '',
           link: '',
-          githubRepo: '',
+          githubRepo: ''
         },
         {
           id: '2',
@@ -44,7 +44,7 @@ export default {
           img: 'https://via.placeholder.com/350x150',
           description: '',
           link: '',
-          githubRepo: '',
+          githubRepo: ''
         },
         {
           id: '3',
@@ -52,7 +52,7 @@ export default {
           img: 'https://via.placeholder.com/350x150',
           description: '',
           link: '',
-          githubRepo: '',
+          githubRepo: ''
         },
         {
           id: '4',
@@ -60,12 +60,12 @@ export default {
           img: 'https://via.placeholder.com/350x150',
           description: '',
           link: '',
-          githubRepo: '',
-        },
-      ],
-    };
-  },
-};
+          githubRepo: ''
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss">

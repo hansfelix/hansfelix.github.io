@@ -1,7 +1,7 @@
 <template>
   <section class="toolbar" :class="classToolbar">
     <div class="toolbar__logo">
-      <SiteLogo />
+      <ButtonHome />
     </div>
 
     <div class="toolbar__hamburguer">
@@ -38,14 +38,14 @@
 </template>
 
 <script>
-import SiteLogo from '~/components/icons/SiteLogo'
+import ButtonHome from '~/components/buttons/ButtonHome'
 import SwitchDarkMode from '~/components/ui/SwitchDarkMode'
 import ButtonHamburger from '~/components/ui/ButtonHamburger'
 import DropdownLanguage from '~/components/ui/DropdownLanguage'
 
 export default {
   components: {
-    SiteLogo,
+    ButtonHome,
     SwitchDarkMode,
     DropdownLanguage,
     ButtonHamburger
