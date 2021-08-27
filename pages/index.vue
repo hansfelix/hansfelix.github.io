@@ -1,32 +1,9 @@
 <template>
   <div class="container">
-    <div class="section main-text" id="main">
-      <div class="main-text__overline">{{ $t('index.overline') }}</div>
-      <h1 class="main-text__title">Hans Felix</h1>
-      <div class="main-text__description">{{ $t('index.desciption') }}</div>
-    </div>
-
-    <div class="section about-me" id="element">
-      <div class="about-me__text">
-        <h2 class="about-me__title">{{ $t('index.aboutMe') }}</h2>
-        <div v-html="$t('index.aboutMeText')"></div>
-
-        <section class="about-me__tech">
-          <div>JavaScript</div>
-          <div>HTML & (S)CSS</div>
-          <div>Vue</div>
-          <div>Node.js</div>
-          <div>C#</div>
-          <div>WordPress</div>
-        </section>
-      </div>
-      <div class="about-me__photo">
-        <img src="/images/hans-felix.jpg" alt="Hans Felix" />
-      </div>
-    </div>
-
-    <Portfolio />
-    <IndexContact />
+    <PresentationHomeBlock />
+    <AboutMeHomeBlock />
+    <PortfolioHomeBlock />
+    <ContactHomeBlock />
 
     <div class="background">
       <h-icon name="background" width="300" height="300"></h-icon>
@@ -68,13 +45,17 @@
 </template>
 
 <script>
-import IndexContact from '@/components/index/IndexContact'
-import Portfolio from '@/components/index/Portfolio'
+import PresentationHomeBlock from '@/components/home-blocks/PresentationHomeBlock'
+import AboutMeHomeBlock from '@/components/home-blocks/AboutMeHomeBlock'
+import ContactHomeBlock from '@/components/home-blocks/ContactHomeBlock'
+import PortfolioHomeBlock from '@/components/home-blocks/PortfolioHomeBlock'
 
 export default {
   components: {
-    IndexContact,
-    Portfolio
+    PresentationHomeBlock,
+    AboutMeHomeBlock,
+    ContactHomeBlock,
+    PortfolioHomeBlock
   }
 }
 </script>
@@ -92,7 +73,7 @@ export default {
 }
 
 .main-text {
-  height:100vh;// calc(- var(--toolbar-height));
+  height: 100vh; // calc(- var(--toolbar-height));
   padding-top: var(--toolbar-height);
   display: flex;
   flex-direction: column;

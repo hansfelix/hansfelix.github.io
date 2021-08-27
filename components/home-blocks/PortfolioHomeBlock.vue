@@ -1,5 +1,6 @@
 <template>
-  <div class="section portfolio-section" id="portfolio">
+  <HomeBlockTemplate id="portfolio">
+  <div class="portfolio-section">
     <h2 class="index-contact__title">Projects</h2>
     <p class="index-contact__text">
       If you wanna get in touch, talk to me about a project collaboration or
@@ -15,10 +16,15 @@
       </section>
     </div>
   </div>
+  </HomeBlockTemplate>
 </template>
 
 <script>
+import HomeBlockTemplate from './HomeBlockTemplate.vue'
 export default {
+  components: {
+    HomeBlockTemplate
+  },
   data () {
     return {
       projects: [

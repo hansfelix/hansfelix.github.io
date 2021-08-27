@@ -38,7 +38,7 @@ export default {
       )
 
       // Observe each section
-      const sections = document.querySelectorAll('.section')
+      const sections = document.querySelectorAll('.home-block')
       sections.forEach((section) => {
         this.sectionObserver.observe(section)
       })
