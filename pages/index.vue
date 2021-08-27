@@ -1,14 +1,14 @@
 <template>
   <div class="container">
-    <div class="main-text">
-      <div class="main-text__overline">{{ $t("index.overline") }}</div>
+    <div class="section main-text" id="main">
+      <div class="main-text__overline">{{ $t('index.overline') }}</div>
       <h1 class="main-text__title">Hans Felix</h1>
-      <div class="main-text__description">{{ $t("index.desciption") }}</div>
+      <div class="main-text__description">{{ $t('index.desciption') }}</div>
     </div>
 
-    <div class="about-me" id="element">
+    <div class="section about-me" id="element">
       <div class="about-me__text">
-        <h2 class="about-me__title">{{ $t("index.aboutMe") }}</h2>
+        <h2 class="about-me__title">{{ $t('index.aboutMe') }}</h2>
         <div v-html="$t('index.aboutMeText')"></div>
 
         <section class="about-me__tech">
@@ -68,15 +68,15 @@
 </template>
 
 <script>
-import IndexContact from "@/components/index/IndexContact";
-import Portfolio from "@/components/index/Portfolio";
+import IndexContact from '@/components/index/IndexContact'
+import Portfolio from '@/components/index/Portfolio'
 
 export default {
   components: {
     IndexContact,
-    Portfolio,
-  },
-};
+    Portfolio
+  }
+}
 </script>
 
 <style lang="scss">
@@ -92,15 +92,15 @@ export default {
 }
 
 .main-text {
-  height: calc(100vh - var(--toolbar-height));
-  margin-top: var(--toolbar-height);
+  height:100vh;// calc(- var(--toolbar-height));
+  padding-top: var(--toolbar-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   &__overline {
     color: $main-color;
-    font-family: "Inconsolata", monospace;
+    font-family: 'Inconsolata', monospace;
     font-size: 20px;
   }
 
@@ -170,7 +170,7 @@ export default {
 
     //TODO: Add custom class for this div
     div:before {
-      content: "-";
+      content: '-';
       margin-right: 5px;
     }
 

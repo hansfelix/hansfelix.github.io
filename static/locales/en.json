@@ -1,8 +1,8 @@
 {
   "links": {
     "aboutMe": "About me",
-    "work": "Work",
-    "contact": "Contacto"
+    "portfolio": "Portfolio",
+    "contact": "Contact"
   },
   "ui": {
     "darkMode": "Dark Mode"

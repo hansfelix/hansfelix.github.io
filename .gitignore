@@ -4,4 +4,10 @@
 # Nuxt generate
 dist
 
+# Service worker
+sw.*
+
+# Optional eslint cache
+.eslintcache
+
 node_modules

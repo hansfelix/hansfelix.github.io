@@ -12,8 +12,47 @@ export default {
   components: {
     Toolbar
   },
+  data () {
+    return {
+      sectionObserver: null
+    }
+  },
+  mounted () {
+    console.log('mounted')
+    this.observeSections()
+  },
+  methods: {
+    observeSections () {
+      console.log('this.sectionObserver', this.sectionObserver)
+      try {
+        this.sectionObserver.disconnect()
+      } catch (error) {}
 
-  computed: {}
+      const options = {
+        rootMargin: '0px',
+        threshold: 0.01
+      }
+      this.sectionObserver = new IntersectionObserver(
+        this.sectionObserverHandler,
+        options
+      )
+
+      // Observe each section
+      const sections = document.querySelectorAll('.section')
+      sections.forEach((section) => {
+        this.sectionObserver.observe(section)
+      })
+    },
+    sectionObserverHandler (entries) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          // Push sectionId to router here
+          this.$router.replace({ name: this.$route.name, hash: `#${sectionId}` })
+        }
+      }
+    }
+  }
 }
 </script>
 
