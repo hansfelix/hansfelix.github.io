@@ -1,16 +1,19 @@
 <template>
   <section class="default-layout">
-    <toolbar />
+    <Toolbar />
     <nuxt />
+    <Footer />
   </section>
 </template>
 
 <script>
 import Toolbar from '~/components/Toolbar'
+import Footer from '~/components/Footer'
 
 export default {
   components: {
-    Toolbar
+    Toolbar,
+    Footer
   },
   data () {
     return {
@@ -18,11 +21,11 @@ export default {
     }
   },
   mounted () {
-    console.log('mounted')
     this.observeSections()
   },
   methods: {
     observeSections () {
+      // TODO: Delete
       console.log('this.sectionObserver', this.sectionObserver)
       try {
         this.sectionObserver.disconnect()
@@ -48,7 +51,10 @@ export default {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id
           // Push sectionId to router here
-          this.$router.replace({ name: this.$route.name, hash: `#${sectionId}` })
+          this.$router.replace({
+            name: this.$route.name,
+            hash: `#${sectionId}`
+          })
         }
       }
     }
