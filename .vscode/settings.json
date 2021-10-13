@@ -1,3 +1,5 @@
 {
-    "vetur.format.defaultFormatter.js": "prettier-eslint"
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "editor.linkedEditing": true
 }

@@ -39,8 +39,6 @@
         <h-icon name="github" width="20" height="20"> </h-icon>
       </a>
     </div>
-
-    <footer class="footer">&copy; Hans Felix</footer>
   </div>
 </template>
 
@@ -175,12 +173,6 @@ export default {
     padding: 20px 0 0px;
   }
 }
-
-.footer {
-  min-height: 50px;
-  @include flex-and-center;
-}
-
 .background {
   position: absolute;
   right: 0;
