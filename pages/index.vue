@@ -72,33 +72,6 @@ export default {
   }
 }
 
-.main-text {
-  height: 100vh; // calc(- var(--toolbar-height));
-  padding-top: var(--toolbar-height);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  &__overline {
-    color: $main-color;
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-  }
-
-  &__title {
-    font-size: 75px;
-    font-weight: 500;
-    letter-spacing: -1px;
-    margin: 0 0 15px;
-  }
-
-  &__description {
-    max-width: 600px;
-    font-size: 18px;
-    line-height: 1.4;
-  }
-}
-
 .about-me {
   min-height: 100vh;
   display: grid;

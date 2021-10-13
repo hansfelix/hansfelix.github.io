@@ -16,4 +16,9 @@ export default {
 </script>
 
 <style lang="scss">
+.home-block {
+  height: 100vh;
+  padding-top: var(--toolbar-height);
+  display: grid;
+}
 </style>
