@@ -1,11 +1,11 @@
 <template>
   <section class="toolbar" :class="classToolbar">
-    <div class="toolbar__logo">
-      <ButtonHome />
-    </div>
-
     <div class="toolbar__hamburguer">
       <ButtonHamburger :active.sync="isContentVisible" />
+    </div>
+
+    <div class="toolbar__logo">
+      <ButtonHome />
     </div>
 
     <!-- Modal backdrop -->
@@ -17,16 +17,21 @@
       />
     </transition>
 
-    <div class="toolbar__nav">
-      <NuxtLink class="toolbar__link" to="#element">
-        {{ $t('links.aboutMe') }}
-      </NuxtLink>
-      <NuxtLink class="toolbar__link" to="#portfolio">
-        {{ $t('links.portfolio') }}
-      </NuxtLink>
-      <NuxtLink class="toolbar__link" to="#contact">
-        {{ $t('links.contact') }}
-      </NuxtLink>
+    <div
+      class="toolbar__content"
+      :class="{ 'toolbar__content--active': isContentVisible }"
+    >
+      <div class="toolbar__nav">
+        <NuxtLink class="toolbar__link" to="#element">
+          {{ $t('links.aboutMe') }}
+        </NuxtLink>
+        <NuxtLink class="toolbar__link" to="#portfolio">
+          {{ $t('links.portfolio') }}
+        </NuxtLink>
+        <NuxtLink class="toolbar__link" to="#contact">
+          {{ $t('links.contact') }}
+        </NuxtLink>
+      </div>
     </div>
 
     <div class="toolbar__actions">
@@ -37,11 +42,6 @@
         <DropdownLanguage />
       </div>
     </div>
-
-    <div
-      class="toolbar__content"
-      :class="{ 'toolbar__content--active': isContentVisible }"
-    ></div>
   </section>
 </template>
 
@@ -111,6 +111,7 @@ export default {
   height: var(--toolbar-height);
   background-color: var(--background-color);
   transition: var(--main-transition);
+  padding: 0 2em;
   z-index: 10;
 
   &__logo {
@@ -129,14 +130,13 @@ export default {
 
     @include mq($until: tablet) {
       width: var(--toolbar-height);
+      flex: 1;
     }
   }
 
   &__hamburguer {
     display: none;
-    flex: 1;
     align-items: center;
-    justify-content: flex-end;
 
     @include mq($until: tablet) {
       display: flex;
@@ -145,8 +145,11 @@ export default {
   }
 
   &__content {
+    flex: 1;
     padding: 0 20px;
-    @include flex-and-center-vertical;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include mq($until: tablet) {
       flex-direction: column-reverse;
@@ -178,11 +181,6 @@ export default {
   }
 
   &__nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     @include mq($until: tablet) {
       @include flex-and-center;
       flex-direction: column;
