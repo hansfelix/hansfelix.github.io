@@ -10,19 +10,25 @@
 
     <transition name="fade">
       <div
+        v-if="isContentVisible"
         class="toolbar__content__backdrop"
         @click="isContentVisible = false"
-        v-if="isContentVisible"
-      ></div>
+      />
     </transition>
     <div
       class="toolbar__content"
       :class="{ 'toolbar__content--active': isContentVisible }"
     >
       <div class="toolbar__nav">
-        <NuxtLink class="toolbar__link" to="#element">{{ $t("links.aboutMe") }}</NuxtLink>
-        <NuxtLink class="toolbar__link" to="#portfolio">{{ $t("links.portfolio") }}</NuxtLink>
-        <NuxtLink class="toolbar__link" to="#contact">{{ $t("links.contact") }}</NuxtLink>
+        <NuxtLink class="toolbar__link" to="#element">
+          {{ $t('links.aboutMe') }}
+        </NuxtLink>
+        <NuxtLink class="toolbar__link" to="#portfolio">
+          {{ $t('links.portfolio') }}
+        </NuxtLink>
+        <NuxtLink class="toolbar__link" to="#contact">
+          {{ $t('links.contact') }}
+        </NuxtLink>
       </div>
 
       <div class="toolbar__actions">
@@ -66,6 +72,11 @@ export default {
     }
   },
 
+  created () {
+    // TODO:
+    // window.addEventListener('scroll', this.handleScroll)
+  },
+
   methods: {
     handleScroll (e) {
       const currentScrollPos = window.pageYOffset
@@ -78,11 +89,6 @@ export default {
 
       // console.log('this', e)
     }
-  },
-
-  created () {
-    // TODO:
-    // window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>

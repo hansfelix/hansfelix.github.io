@@ -1,9 +1,13 @@
 <template>
-  <section class="button-hamburger" :class="classButton" @click="$emit('update:active', !active)">
+  <section
+    class="button-hamburger"
+    :class="classButton"
+    @click="$emit('update:active', !active)"
+  >
     <span class="button-hamburger__content hamburguer">
-      <span class="button-hamburger__bar bar-1"></span>
-      <span class="button-hamburger__bar bar-2"></span>
-      <span class="button-hamburger__bar bar-3"></span>
+      <span class="button-hamburger__bar bar-1" />
+      <span class="button-hamburger__bar bar-2" />
+      <span class="button-hamburger__bar bar-3" />
     </span>
   </section>
 </template>
@@ -18,11 +22,11 @@ export default {
   },
 
   computed: {
-    classButton() {
-      return { "button-hamburger--active": this.active };
+    classButton () {
+      return { 'button-hamburger--active': this.active }
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -70,7 +74,6 @@ export default {
     transform: rotate(0) translate3d(0, 10px, 0);
   }
 
-  // Modifiers
   &--active {
     #{$self}__content {
       transform: rotate(180deg);
