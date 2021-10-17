@@ -81,7 +81,9 @@ export default {
     // https://google-fonts.nuxtjs.org/setup
     '@nuxtjs/google-fonts',
     // https://color-mode.nuxtjs.org/
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    // https://github.com/nuxt-community/svg-module
+    "@nuxtjs/svg"
   ],
 
   styleResources: {
