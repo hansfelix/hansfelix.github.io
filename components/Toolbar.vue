@@ -8,6 +8,7 @@
       <ButtonHamburger :active.sync="isContentVisible" />
     </div>
 
+    <!-- Modal backdrop -->
     <transition name="fade">
       <div
         v-if="isContentVisible"
@@ -15,31 +16,32 @@
         @click="isContentVisible = false"
       />
     </transition>
+
+    <div class="toolbar__nav">
+      <NuxtLink class="toolbar__link" to="#element">
+        {{ $t('links.aboutMe') }}
+      </NuxtLink>
+      <NuxtLink class="toolbar__link" to="#portfolio">
+        {{ $t('links.portfolio') }}
+      </NuxtLink>
+      <NuxtLink class="toolbar__link" to="#contact">
+        {{ $t('links.contact') }}
+      </NuxtLink>
+    </div>
+
+    <div class="toolbar__actions">
+      <div class="toolbar__dark_mode">
+        <SwitchDarkMode />
+      </div>
+      <div class="toolbar__language">
+        <DropdownLanguage />
+      </div>
+    </div>
+
     <div
       class="toolbar__content"
       :class="{ 'toolbar__content--active': isContentVisible }"
-    >
-      <div class="toolbar__nav">
-        <NuxtLink class="toolbar__link" to="#element">
-          {{ $t('links.aboutMe') }}
-        </NuxtLink>
-        <NuxtLink class="toolbar__link" to="#portfolio">
-          {{ $t('links.portfolio') }}
-        </NuxtLink>
-        <NuxtLink class="toolbar__link" to="#contact">
-          {{ $t('links.contact') }}
-        </NuxtLink>
-      </div>
-
-      <div class="toolbar__actions">
-        <div class="toolbar__dark_mode">
-          <SwitchDarkMode />
-        </div>
-        <div class="toolbar__language">
-          <DropdownLanguage />
-        </div>
-      </div>
-    </div>
+    ></div>
   </section>
 </template>
 
@@ -143,7 +145,6 @@ export default {
   }
 
   &__content {
-    flex: 1;
     padding: 0 20px;
     @include flex-and-center-vertical;
 
@@ -178,6 +179,9 @@ export default {
 
   &__nav {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include mq($until: tablet) {
       @include flex-and-center;
@@ -187,38 +191,47 @@ export default {
 
   &__actions {
     flex: 0;
-    @include flex-and-center-vertical;
-  }
-
-  &__dark_mode {
-    margin-right: 15px;
-  }
-
-  &__language {
-    min-height: 50px;
-    min-width: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    @include flex-and-center-vertical;
   }
 
   &__link {
     position: relative;
     display: inline-block;
     padding: 0 10px 10px;
-    margin-right: 20px;
     color: var(--link-text-color);
     font-size: 16px;
     text-decoration: none;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #9494944d;
-      height: 3px;
-      width: 100%;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.is-active {
+      color: black;
+      font-weight: 500;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        height: 2px;
+        border-radius: 20px;
+        width: 100%;
+      }
+    }
+
+    &__dark_mode {
+      margin-right: 15px;
+    }
+
+    &__language {
+      min-height: 50px;
+      min-width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @include mq($until: tablet) {

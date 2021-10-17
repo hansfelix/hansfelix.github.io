@@ -51,7 +51,7 @@ export default {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id
           // Push sectionId to router here
-          this.$router.replace({
+          this.$router.push({
             name: this.$route.name,
             hash: `#${sectionId}`
           })
