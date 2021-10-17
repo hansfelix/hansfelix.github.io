@@ -5,9 +5,7 @@
     <PortfolioHomeBlock />
     <ContactHomeBlock />
 
-    <div class="background">
-      <h-icon name="background" width="300" height="300"></h-icon>
-    </div>
+    <!-- <BackgroundSvg /> -->
 
     <div class="social">
       <a
@@ -15,28 +13,28 @@
         href="https://www.linkedin.com/in/hans-felix/"
         target="_blank"
       >
-        <h-icon name="linkedin" width="20" height="20"></h-icon>
+        <LinkedinSvg class="icon" />
       </a>
       <a
         class="social__item"
         href="https://twitter.com/hansfelixramos"
         target="_blank"
       >
-        <h-icon name="twitter" width="20" height="20"></h-icon>
+        <TwitterSvg class="icon" />
       </a>
       <a
         class="social__item"
         href="https://stackoverflow.com/users/9176232/hans-felix-ramos?tab=profile"
         target="_blank"
       >
-        <h-icon name="stackoverflow" width="20" height="20"> </h-icon>
+        <StackoverflowSvg class="icon" />
       </a>
       <a
         class="social__item"
         href="https://github.com/hansfelix"
         target="_blank"
       >
-        <h-icon name="github" width="20" height="20"> </h-icon>
+        <GithubSvg class="icon" />
       </a>
     </div>
   </div>
@@ -47,13 +45,25 @@ import PresentationHomeBlock from '@/components/home-blocks/PresentationHomeBloc
 import AboutMeHomeBlock from '@/components/home-blocks/AboutMeHomeBlock'
 import ContactHomeBlock from '@/components/home-blocks/ContactHomeBlock'
 import PortfolioHomeBlock from '@/components/home-blocks/PortfolioHomeBlock'
+// icons imports
+// import BackgroundSvg from '~/assets/icons/background.svg?inline'
+import LinkedinSvg from '~/assets/icons/linkedin.svg?inline'
+import TwitterSvg from '~/assets/icons/twitter.svg?inline'
+import StackoverflowSvg from '~/assets/icons/stackoverflow.svg?inline'
+import GithubSvg from '~/assets/icons/github.svg?inline'
 
 export default {
   components: {
     PresentationHomeBlock,
     AboutMeHomeBlock,
     ContactHomeBlock,
-    PortfolioHomeBlock
+    PortfolioHomeBlock,
+    // icons
+    // BackgroundSvg,
+    LinkedinSvg,
+    TwitterSvg,
+    StackoverflowSvg,
+    GithubSvg
   }
 }
 </script>
@@ -140,7 +150,7 @@ export default {
 .social {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 2em;
   height: 100%;
   width: 100px;
   display: flex;

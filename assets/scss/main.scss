@@ -49,7 +49,17 @@ html {
   }
 }
 
-
-a:visited{
+a:visited {
   color: currentColor;
+}
+
+.icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+
+  &.is-strocke {
+    fill: none;
+    stroke: currentColor;
+  }
 }
