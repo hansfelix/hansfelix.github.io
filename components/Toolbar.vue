@@ -1,37 +1,45 @@
 <template>
   <section class="toolbar" :class="classToolbar">
-    <div class="toolbar__logo">
-      <ButtonHome />
-    </div>
-
     <div class="toolbar__hamburguer">
       <ButtonHamburger :active.sync="isContentVisible" />
     </div>
 
+    <div class="toolbar__logo">
+      <ButtonHome />
+    </div>
+
+    <!-- Modal backdrop -->
     <transition name="fade">
       <div
+        v-if="isContentVisible"
         class="toolbar__content__backdrop"
         @click="isContentVisible = false"
-        v-if="isContentVisible"
-      ></div>
+      />
     </transition>
+
     <div
       class="toolbar__content"
       :class="{ 'toolbar__content--active': isContentVisible }"
     >
       <div class="toolbar__nav">
-        <NuxtLink class="toolbar__link" to="#element">{{ $t("links.aboutMe") }}</NuxtLink>
-        <NuxtLink class="toolbar__link" to="#portfolio">{{ $t("links.portfolio") }}</NuxtLink>
-        <NuxtLink class="toolbar__link" to="#contact">{{ $t("links.contact") }}</NuxtLink>
+        <NuxtLink class="toolbar__link" to="#element">
+          {{ $t('links.aboutMe') }}
+        </NuxtLink>
+        <NuxtLink class="toolbar__link" to="#portfolio">
+          {{ $t('links.portfolio') }}
+        </NuxtLink>
+        <NuxtLink class="toolbar__link" to="#contact">
+          {{ $t('links.contact') }}
+        </NuxtLink>
       </div>
+    </div>
 
-      <div class="toolbar__actions">
-        <div class="toolbar__dark_mode">
-          <SwitchDarkMode />
-        </div>
-        <div class="toolbar__language">
-          <DropdownLanguage />
-        </div>
+    <div class="toolbar__actions">
+      <div class="toolbar__dark_mode">
+        <SwitchDarkMode />
+      </div>
+      <div class="toolbar__language">
+        <DropdownLanguage />
       </div>
     </div>
   </section>
@@ -66,6 +74,11 @@ export default {
     }
   },
 
+  created () {
+    // TODO:
+    // window.addEventListener('scroll', this.handleScroll)
+  },
+
   methods: {
     handleScroll (e) {
       const currentScrollPos = window.pageYOffset
@@ -78,11 +91,6 @@ export default {
 
       // console.log('this', e)
     }
-  },
-
-  created () {
-    // TODO:
-    // window.addEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -103,6 +111,7 @@ export default {
   height: var(--toolbar-height);
   background-color: var(--background-color);
   transition: var(--main-transition);
+  padding: 0 2em;
   z-index: 10;
 
   &__logo {
@@ -121,14 +130,13 @@ export default {
 
     @include mq($until: tablet) {
       width: var(--toolbar-height);
+      flex: 1;
     }
   }
 
   &__hamburguer {
     display: none;
-    flex: 1;
     align-items: center;
-    justify-content: flex-end;
 
     @include mq($until: tablet) {
       display: flex;
@@ -139,7 +147,9 @@ export default {
   &__content {
     flex: 1;
     padding: 0 20px;
-    @include flex-and-center-vertical;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include mq($until: tablet) {
       flex-direction: column-reverse;
@@ -171,8 +181,6 @@ export default {
   }
 
   &__nav {
-    flex: 1;
-
     @include mq($until: tablet) {
       @include flex-and-center;
       flex-direction: column;
@@ -181,38 +189,47 @@ export default {
 
   &__actions {
     flex: 0;
-    @include flex-and-center-vertical;
-  }
-
-  &__dark_mode {
-    margin-right: 15px;
-  }
-
-  &__language {
-    min-height: 50px;
-    min-width: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    @include flex-and-center-vertical;
   }
 
   &__link {
     position: relative;
     display: inline-block;
     padding: 0 10px 10px;
-    margin-right: 20px;
     color: var(--link-text-color);
     font-size: 16px;
     text-decoration: none;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: #9494944d;
-      height: 3px;
-      width: 100%;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.is-active {
+      color: black;
+      font-weight: 500;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        height: 2px;
+        border-radius: 20px;
+        width: 100%;
+      }
+    }
+
+    &__dark_mode {
+      margin-right: 15px;
+    }
+
+    &__language {
+      min-height: 50px;
+      min-width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @include mq($until: tablet) {

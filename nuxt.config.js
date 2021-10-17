@@ -12,8 +12,10 @@ export default {
   ** Router configuration
   */
   router: {
+    linkActiveClass: 'is-active',
+    linkExactActiveClass: 'is-exact-active',
     scrollBehavior: async (to, from, savedPosition) => {
-      console.log(to, from, savedPosition) 
+      console.log(to, from, savedPosition)
       if (savedPosition) {
         return savedPosition
       }
