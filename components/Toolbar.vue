@@ -1,45 +1,47 @@
 <template>
   <section class="toolbar" :class="classToolbar">
-    <div class="toolbar__hamburguer">
-      <ButtonHamburger :active.sync="isContentVisible" />
-    </div>
+    <div class="container">
+      <div class="toolbar__hamburguer">
+        <ButtonHamburger :active.sync="isContentVisible" />
+      </div>
 
-    <div class="toolbar__logo">
-      <ButtonHome />
-    </div>
+      <div class="toolbar__logo">
+        <ButtonHome />
+      </div>
 
-    <!-- Modal backdrop -->
-    <transition name="fade">
+      <!-- Modal backdrop -->
+      <transition name="fade">
+        <div
+          v-if="isContentVisible"
+          class="toolbar__content__backdrop"
+          @click="isContentVisible = false"
+        />
+      </transition>
+
       <div
-        v-if="isContentVisible"
-        class="toolbar__content__backdrop"
-        @click="isContentVisible = false"
-      />
-    </transition>
-
-    <div
-      class="toolbar__content"
-      :class="{ 'toolbar__content--active': isContentVisible }"
-    >
-      <div class="toolbar__nav">
-        <NuxtLink class="toolbar__link" to="/">
-          {{ $t('links.aboutMe') }}
-        </NuxtLink>
-        <NuxtLink class="toolbar__link" to="#portfolio">
-          {{ $t('links.portfolio') }}
-        </NuxtLink>
-        <NuxtLink class="toolbar__link" to="#contact">
-          {{ $t('links.contact') }}
-        </NuxtLink>
+        class="toolbar__content"
+        :class="{ 'toolbar__content--active': isContentVisible }"
+      >
+        <div class="toolbar__nav">
+          <NuxtLink class="toolbar__link" to="/">
+            {{ $t('links.aboutMe') }}
+          </NuxtLink>
+          <NuxtLink class="toolbar__link" to="#portfolio">
+            {{ $t('links.portfolio') }}
+          </NuxtLink>
+          <NuxtLink class="toolbar__link" to="#contact">
+            {{ $t('links.contact') }}
+          </NuxtLink>
+        </div>
       </div>
-    </div>
 
-    <div class="toolbar__actions">
-      <div class="toolbar__dark_mode">
-        <SwitchDarkMode />
-      </div>
-      <div class="toolbar__language">
-        <DropdownLanguage />
+      <div class="toolbar__actions">
+        <div class="toolbar__dark_mode">
+          <SwitchDarkMode />
+        </div>
+        <div class="toolbar__language">
+          <DropdownLanguage />
+        </div>
       </div>
     </div>
   </section>
@@ -107,16 +109,18 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
-  height: var(--toolbar-height);
   background-color: var(--background-color);
   transition: var(--main-transition);
-  padding: 0 2em;
+
   z-index: 10;
+
+  > .container {
+    display: flex;
+    height: var(--toolbar-height);
+  }
 
   &__logo {
     height: 100%;
-    width: 100px; // to get a square width: 100px
     display: flex;
     align-items: center;
     justify-content: center;
