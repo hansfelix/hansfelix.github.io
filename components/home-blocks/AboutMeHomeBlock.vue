@@ -52,7 +52,7 @@ export default {
       transition: 0.2s all ease-in-out;
     }
 
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       grid-row-start: 1;
       justify-self: center;
 
@@ -103,12 +103,12 @@ export default {
       margin-right: 5px;
     }
 
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
-  @include mq($until: tablet) {
+  @include mq($until: md) {
     grid-template-columns: auto;
     grid-template-rows: 1fr 1;
   }

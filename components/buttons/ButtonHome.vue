@@ -28,7 +28,6 @@
 <style lang="scss">
 .main-logo {
   width: 100%;
-  height: 100%;
   animation: 1s appear;
 
   &__decorator {

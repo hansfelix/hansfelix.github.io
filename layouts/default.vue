@@ -75,7 +75,7 @@ export default {
   transition: var(--main-transition);
   overflow: hidden;
 
-  @include mq($until: tablet) {
+  @include mq($until: md) {
   }
 }
 
