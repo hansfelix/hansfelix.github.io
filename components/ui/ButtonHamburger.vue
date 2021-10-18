@@ -30,11 +30,12 @@ export default {
 </script>
 
 <style lang="scss">
+$hamburger-width: 28px;
+
 .button-hamburger {
   $self: &;
 
   position: relative;
-  width: 50px;
   height: 50px;
   cursor: pointer;
   @include flex-and-center;
@@ -44,7 +45,7 @@ export default {
   }
 
   &__content {
-    width: 32px;
+    width: $hamburger-width;
     transition: 0.3s transform ease-in-out;
   }
 
@@ -58,20 +59,23 @@ export default {
     left: 0;
     margin: auto;
 
-    width: 32px;
-    height: 3px;
+    width: $hamburger-width;
+    height: 2px;
     background: var(--accent-color);
+    border-radius: 20px;
     transition: 0.3s transform ease-in-out;
   }
 
   // Move up bar 1
   .bar-1 {
-    transform: rotate(0) translate3d(0, -10px, 0);
+    transform: rotate(0) translate3d(0, -9px, 0);
   }
 
   // Move down bar 3
   .bar-3 {
-    transform: rotate(0) translate3d(0, 10px, 0);
+    transform: rotate(0) translate3d(0, 9px, 0);
+    width: $hamburger-width - 10px;
+    right: auto;
   }
 
   &--active {
@@ -86,6 +90,7 @@ export default {
       }
       .bar-3 {
         transform: rotate(-45deg) translate3d(0, 0, 0);
+        width: $hamburger-width;
       }
     }
   }
