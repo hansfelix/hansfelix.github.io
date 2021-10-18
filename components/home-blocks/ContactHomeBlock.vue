@@ -2,7 +2,6 @@
   <HomeBlockTemplate id="contact">
     <section class="index-contact">
       <div class="index-contact__content">
-        <!-- <h2 class="index-contact__title">Get in touch!</h2> -->
         <h2 class="index-contact__title">Interested in working together?</h2>
         <p class="index-contact__text">
           If you wanna get in touch, talk to me about a project collaboration or
