@@ -43,7 +43,7 @@ html {
 }
 
 // Variables on Mobile
-@include mq($until: tablet) {
+@include mq($until: md) {
   :root {
     --toolbar-height: 70px;
   }
@@ -61,5 +61,32 @@ a:visited {
   &.is-strocke {
     fill: none;
     stroke: currentColor;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  // padding: 0 150px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include mq($from: xs) {
+    max-width: 100%;
+  }
+  @include mq($from: sm) {
+    max-width: 540px;
+  }
+  @include mq($from: md) {
+    max-width: 720px;
+  }
+  @include mq($from: lg) {
+    max-width: 960px;
+  }
+  @include mq($from: xl) {
+    max-width: 1140px;
+  }
+  @include mq($from: xxl) {
+    max-width: 1320px;
   }
 }

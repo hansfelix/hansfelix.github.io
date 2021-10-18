@@ -1,5 +1,9 @@
 <template>
-  <div class="theme-button" :class="classThemeButton" @click="$store.commit('settings/toogleIsDarkMode')">
+  <div
+    class="theme-button"
+    :class="classThemeButton"
+    @click="$store.commit('settings/toogleIsDarkMode')"
+  >
     <div class="circle">
       <div class="crescent"></div>
     </div>
@@ -7,12 +11,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from 'vuex'
 export default {
-  data() {
+  data () {
     return {
       theme: 'light'
-    };
+    }
   },
 
   computed: {
@@ -20,23 +24,23 @@ export default {
       isDarkMode: 'settings/isDarkMode'
     }),
 
-    classThemeButton() {
+    classThemeButton () {
       return {
         'theme-button--dark': this.isDarkMode,
         'theme-button--light': !this.isDarkMode
-      };
+      }
     }
   },
 
-  mounted() {
+  mounted () {
     // Check: https://stackoverflow.com/questions/56393880/how-do-i-detect-dark-mode-using-javascript
-    let isDarkMode =
+    const isDarkMode =
       window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches;
+      window.matchMedia('(prefers-color-scheme: dark)').matches
 
-    this.theme = isDarkMode ? 'dark' : 'light';
+    this.theme = isDarkMode ? 'dark' : 'light'
   }
-};
+}
 </script>
 
 <style lang="scss">

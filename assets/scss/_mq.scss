@@ -1,18 +1,14 @@
 /*
  * DOCS: https://github.com/sass-mq/sass-mq
+ * Use bootstrap 5 breakpoints: https://getbootstrap.com/docs/5.0/layout/breakpoints/
  */
- $mq-breakpoints: (
-    //xs
-      mobile: 320px,
-    //sm
-      tablet: 740px,
-    //md
-      wide: 980px,
-    //lg
-      desktop: 1200px,
-    //xl
-      big-desktop: 1600px
-  );
-  
-  @import "~sass-mq";
-  
+$mq-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@import "~sass-mq";

@@ -128,7 +128,7 @@ export default {
       max-height: 40px;
     }
 
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       width: var(--toolbar-height);
       flex: 1;
     }
@@ -138,7 +138,7 @@ export default {
     display: none;
     align-items: center;
 
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       display: flex;
       z-index: 300;
     }
@@ -151,7 +151,7 @@ export default {
     align-items: center;
     justify-content: center;
 
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       flex-direction: column-reverse;
       position: fixed;
       top: 0;
@@ -181,7 +181,7 @@ export default {
   }
 
   &__nav {
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       @include flex-and-center;
       flex-direction: column;
     }
@@ -232,13 +232,13 @@ export default {
       justify-content: center;
     }
 
-    @include mq($until: tablet) {
+    @include mq($until: md) {
       margin: 0 0 24px 0;
       font-size: 18px;
     }
   }
 
-  @include mq($until: tablet) {
+  @include mq($until: md) {
     padding: 0 10px;
 
     &__logo {

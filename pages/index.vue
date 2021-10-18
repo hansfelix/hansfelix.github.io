@@ -69,16 +69,6 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  width: 100%;
-  max-width: 1300px;
-  // padding: 0 150px;
-  margin: 0 auto;
-
-  @include mq($until: tablet) {
-    padding: 10px 25px;
-  }
-}
 
 .social {
   position: fixed;
@@ -108,7 +98,7 @@ export default {
     }
   }
 
-  @include mq($until: tablet) {
+  @include mq($until: md) {
     position: static;
     flex-direction: row;
     justify-content: center;
