@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="about-me__photo">
-        <img src="/images/hans-felix.png" alt="Hans Felix" />
+        <img class="image" src="/images/hans-felix.png" alt="Hans Felix" />
       </div>
       <div class="about-me__second-text">
         Está página la he diseñado para poder customizarla , porfavor intenta
@@ -36,10 +36,19 @@ export default {
 }
 
 .about-me {
-  height: 550px;
+ // height: 100%;
   align-self: center;
   display: grid;
-  grid-template-columns: 3fr auto 2fr;
+  grid-template-rows: 1fr 1;
+
+  @include mq($from: md) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mq($from: lg) {
+    grid-template-columns: 3fr auto 2fr;
+  }
 
   &__photo {
     align-self: center;
@@ -55,11 +64,6 @@ export default {
     @include mq($until: md) {
       grid-row-start: 1;
       justify-self: center;
-
-      img {
-        max-width: 150px;
-        margin: 10px;
-      }
     }
   }
 
@@ -106,11 +110,6 @@ export default {
     @include mq($until: md) {
       grid-template-columns: 1fr 1fr;
     }
-  }
-
-  @include mq($until: md) {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1;
   }
 }
 </style>
