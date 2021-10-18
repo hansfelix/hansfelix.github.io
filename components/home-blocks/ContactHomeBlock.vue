@@ -111,11 +111,8 @@ export default {
   }
 
   @include mq($until: md) {
-    position: static;
-    flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding: 20px 0 0px;
   }
 }
 </style>
