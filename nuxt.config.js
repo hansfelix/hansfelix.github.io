@@ -12,35 +12,9 @@ export default {
   ** Router configuration
   */
   router: {
-    linkActiveClass: 'is-active',
-    linkExactActiveClass: 'is-exact-active',
-    scrollBehavior: async (to, from, savedPosition) => {
-      console.log(to, from, savedPosition)
-      if (savedPosition) {
-        return savedPosition
-      }
-
-      const findEl = async (hash, x) => {
-        return document.querySelector(hash) ||
-          new Promise((resolve, reject) => {
-            if (x > 50) {
-              return resolve()
-            }
-            setTimeout(() => { resolve(findEl(hash, ++x || 1)) }, 100)
-          })
-      }
-
-      if (to.hash) {
-        let el = await findEl(to.hash)
-        if ('scrollBehavior' in document.documentElement.style) {
-          return window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
-        } else {
-          return window.scrollTo(0, el.offsetTop)
-        }
-      }
-
-      return { x: 0, y: 0 }
-    }
+    linkActiveClass: 'is-not-exact-active',
+    // I prefer absolute match to send is-active class
+    linkExactActiveClass: 'is-active'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -94,6 +68,7 @@ export default {
     display: 'swap',
     families: {
       'DM+Sans': [400, 500],
+
       'Inconsolata': [400]
     }
   },

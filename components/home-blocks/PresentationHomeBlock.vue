@@ -6,7 +6,7 @@
       </div>
       <h1 class="presentation-home__title">Hans Felix</h1>
       <div class="presentation-home__description">
-        {{ $t('index.desciption') }}
+        {{ $t('index.description') }}
       </div>
     </div>
   </HomeBlockTemplate>
