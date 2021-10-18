@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <PresentationHomeBlock />
+    <!-- <PresentationHomeBlock /> -->
     <AboutMeHomeBlock />
     <PortfolioHomeBlock />
     <ContactHomeBlock />
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import PresentationHomeBlock from '@/components/home-blocks/PresentationHomeBlock'
+// import PresentationHomeBlock from '@/components/home-blocks/PresentationHomeBlock'
 import AboutMeHomeBlock from '@/components/home-blocks/AboutMeHomeBlock'
 import ContactHomeBlock from '@/components/home-blocks/ContactHomeBlock'
 import PortfolioHomeBlock from '@/components/home-blocks/PortfolioHomeBlock'
@@ -54,7 +54,7 @@ import GithubSvg from '~/assets/icons/github.svg?inline'
 
 export default {
   components: {
-    PresentationHomeBlock,
+    // PresentationHomeBlock,
     AboutMeHomeBlock,
     ContactHomeBlock,
     PortfolioHomeBlock,
@@ -72,78 +72,11 @@ export default {
 .container {
   width: 100%;
   max-width: 1300px;
-  padding: 0 150px;
+  // padding: 0 150px;
   margin: 0 auto;
 
   @include mq($until: tablet) {
     padding: 10px 25px;
-  }
-}
-
-.about-me {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 60% 40%;
-
-  &__photo {
-    align-self: center;
-    justify-self: end;
-
-    img {
-      max-width: 250px;
-      border-radius: 50%;
-      filter: grayscale(1);
-      opacity: 0.75;
-      transition: 0.2s all ease-in-out;
-    }
-
-    @include mq($until: tablet) {
-      grid-row-start: 1;
-      justify-self: center;
-
-      img {
-        max-width: 150px;
-        margin: 10px;
-      }
-    }
-  }
-
-  &__text {
-    align-self: center;
-    justify-self: center;
-    font-size: 17px;
-    line-height: 1.4;
-
-    p {
-      margin-bottom: 15px;
-    }
-  }
-
-  &__title {
-    color: #6495b5;
-    font-size: 1.8em;
-    margin-bottom: 15px;
-  }
-
-  &__tech {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
-
-    //TODO: Add custom class for this div
-    div:before {
-      content: '-';
-      margin-right: 5px;
-    }
-
-    @include mq($until: tablet) {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @include mq($until: tablet) {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1;
   }
 }
 

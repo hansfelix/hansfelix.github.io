@@ -22,7 +22,7 @@
       :class="{ 'toolbar__content--active': isContentVisible }"
     >
       <div class="toolbar__nav">
-        <NuxtLink class="toolbar__link" to="#element">
+        <NuxtLink class="toolbar__link" to="/">
           {{ $t('links.aboutMe') }}
         </NuxtLink>
         <NuxtLink class="toolbar__link" to="#portfolio">

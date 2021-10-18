@@ -96,8 +96,7 @@ export default {
     &:first-child {
       border-bottom: 1px solid #9494944d;
     }
-    // As we use hash for routes, nuxt print is-exact-active to handle paths, query and hash
-    &.is-exact-active {
+    &.is-active {
       color: var(--accent-color);
     }
   }

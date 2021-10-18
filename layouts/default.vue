@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     observeSections () {
-      // TODO: Delete
       console.log('this.sectionObserver', this.sectionObserver)
       try {
         this.sectionObserver.disconnect()
@@ -33,7 +32,7 @@ export default {
 
       const options = {
         rootMargin: '0px',
-        threshold: 0.01
+        threshold: 0.6
       }
       this.sectionObserver = new IntersectionObserver(
         this.sectionObserverHandler,
@@ -51,9 +50,12 @@ export default {
         if (entry.isIntersecting) {
           const sectionId = entry.target.id
           // Push sectionId to router here
-          this.$router.push({
+          console.log(this.$route.hash)
+          this.$router.replace({
             name: this.$route.name,
-            hash: `#${sectionId}`
+            hash: `#${sectionId}`,
+            // hacky: params is sent but only to be handled by scrollBehavior in order to avoid scroll to hash
+            params: { retainPosition: true }
           })
         }
       }
