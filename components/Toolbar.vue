@@ -243,8 +243,6 @@ export default {
   }
 
   @include mq($until: md) {
-    padding: 0 10px;
-
     &__logo {
       padding: 10px;
     }
