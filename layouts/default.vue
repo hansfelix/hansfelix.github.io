@@ -65,13 +65,20 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --layout-background-color: #f8f8f8;
+  &.dark-mode {
+    --layout-background-color: #181818;
+  }
+}
+
 .dark-mode.default-layout {
   --constrast-background-color-25: rgb(256, 256, 256, 0.1);
 }
 
 .default-layout {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--layout-background-color);
   transition: var(--main-transition);
   overflow: hidden;
 
