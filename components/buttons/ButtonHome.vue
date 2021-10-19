@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/">
+  <NuxtLink :to="localePath('/')">
     <svg
       class="main-logo"
       width="40"

@@ -61,7 +61,7 @@ $hamburger-width: 28px;
 
     width: $hamburger-width;
     height: 2px;
-    background: var(--accent-color);
+    background: var(--text-color);
     border-radius: 20px;
     transition: 0.3s transform ease-in-out;
   }
