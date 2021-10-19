@@ -10,7 +10,6 @@
   "index": {
     "overline": "Hi! My name is",
     "description": "A software developer based in Peru, I create web applications that help people develop their ideas and grow their businesses. I make my own designs.",
-    "aboutMe": "About me",
-    "aboutMeText": "<p> Hi! My name is Hans Felix software developer based in Peru. </p><p> My goal is to create websites that help companies achieve their business goals, taking care of design and user experience.</p><p> These years I have been helping construction companies to digitize their processes developing web applications. </p><p>Here are a few technologies I've been working with recently: </p>"
-  }
+    "playgroundText": "This page has been designed to be customized, you can update the colors here:"
+    }
 }

@@ -15,8 +15,8 @@
         <img class="image" src="/images/hans-felix.png" alt="Hans Felix" />
       </div>
       <div class="about-me__second-text">
-        Está página la he diseñado para poder customizarla , porfavor intenta
-        aqui:
+        {{ $t('index.playgroundText') }}
+        <button href="button is-link">Configuración</button>
       </div>
     </div>
   </HomeBlockTemplate>
@@ -78,8 +78,6 @@ export default {
     }
 
     img {
-      // max-width: 250px;
-      border-radius: 50%;
       position: relative;
       z-index: 30;
       transition: 0.2s all ease-in-out;

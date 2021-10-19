@@ -10,7 +10,6 @@
   "index": {
     "overline": "¡Hola! Mi nombre es",
     "description": "Desarrollador de software radicado en Perú, creo aplicaciones web que ayudan a las personas a desarrollar sus ideas y crecer sus negocios. Hago mis propios diseños.",
-    "aboutMe": "Sobre mi",
-    "aboutMeText": "<p>¡Hola! Soy Hans Felix, un desarrollador de software radicado en Perú. </p><p>Mi objetivo es crear aplicaciones webs que ayuden a las empresas a cumplir sus objetivos empresariales, cuidando la interfaz y la experiencia de usuario. </p><p>Estos últimos años he estado ayudando a las empresas del sector construcción a digitalizar procesos mediante la creación de aplicaciones. </p><p>Algunas tecnologías con las que he trabajado recientemente:</p>"
+    "playgroundText": "Está página ha sido diseñado para poder customizarse, puedes actualizar los colores aquí:"
   }
 }
