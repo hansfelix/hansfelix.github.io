@@ -24,7 +24,7 @@
 
 <script>
 import HomeBlockTemplate from './HomeBlockTemplate.vue'
-import Lines45Svg from '~/assets/icons/lines45.svg?inline'
+import Lines45Svg from '~/assets/icons/mochica-detail.svg?inline'
 
 export default {
   components: {
@@ -51,17 +51,37 @@ export default {
   }
 
   @include mq($from: lg) {
-    grid-template-columns: 3fr auto 2fr;
+    grid-template-columns: 3fr 4fr 2fr;
   }
 
   &__photo {
+    position: relative;
     align-self: center;
     justify-self: end;
+    font-size: 0;
+
+    &:after {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      content: '';
+      -webkit-mask: url('/images/hans-felix-before.svg') no-repeat 50% 50%;
+      mask: urlurl('/images/hans-felix-before.svg') no-repeat 50% 50%;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: var(--accent-color);
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0.25;
+    }
 
     img {
       // max-width: 250px;
       border-radius: 50%;
-      opacity: 0.75;
+      position: relative;
+      z-index: 30;
       transition: 0.2s all ease-in-out;
     }
 
