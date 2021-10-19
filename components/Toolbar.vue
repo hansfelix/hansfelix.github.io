@@ -23,13 +23,25 @@
         :class="{ 'toolbar__content--active': isContentVisible }"
       >
         <div class="toolbar__nav">
-          <NuxtLink class="toolbar__link" to="#about-me">
+          <NuxtLink
+            class="toolbar__link"
+            to="#about-me"
+            @click.native="isContentVisible = false"
+          >
             {{ $t('links.aboutMe') }}
           </NuxtLink>
-          <NuxtLink class="toolbar__link" to="#portfolio">
+          <NuxtLink
+            class="toolbar__link"
+            to="#portfolio"
+            @click.native="isContentVisible = false"
+          >
             {{ $t('links.portfolio') }}
           </NuxtLink>
-          <NuxtLink class="toolbar__link" to="#contact">
+          <NuxtLink
+            class="toolbar__link"
+            to="#contact"
+            @click.native="isContentVisible = false"
+          >
             {{ $t('links.contact') }}
           </NuxtLink>
         </div>
