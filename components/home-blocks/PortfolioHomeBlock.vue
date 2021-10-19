@@ -1,21 +1,22 @@
 <template>
   <HomeBlockTemplate id="portfolio">
-  <div class="portfolio-section">
-    <h2 class="index-contact__title">Projects</h2>
-    <p class="index-contact__text">
-      If you wanna get in touch, talk to me about a project collaboration or
-      just say hi, send me an email to hansfelixramos@gmail.com I'll try my best
-      to get back to you! We can also be in contact through any of my social
-      networks
-    </p>
-    <div class="projects">
-      <section class="project" v-for="project in projects" :key="project.id">
-        <img class="project_image" :src="project.img" />
-        <h3>{{ project.name }}</h3>
-        <!-- tags -->
-      </section>
+    <div class="portfolio-section">
+      <h2 class="portfolio-section__title">
+        {{ $t('portfolio.title') }}
+      </h2>
+      <p class="index-contact__text">
+        If you wanna get in touch, talk to me about a project collaboration or
+        just say hi, send me an email to hansfelixramos@gmail.com I'll try my
+        best to get back to you! We can also be in contact through any of my
+        social networks
+      </p>
+      <div class="projects">
+        <section v-for="project in projects" :key="project.id" class="project">
+          <img class="project_image" :src="project.img" />
+          <h3>{{ project.name }}</h3>
+        </section>
+      </div>
     </div>
-  </div>
   </HomeBlockTemplate>
 </template>
 
@@ -35,38 +36,6 @@ export default {
           description: '',
           link: '',
           githubRepo: ''
-        },
-        {
-          id: '1',
-          name: 'project name',
-          img: 'https://via.placeholder.com/350x150',
-          description: '',
-          link: '',
-          githubRepo: ''
-        },
-        {
-          id: '2',
-          name: 'project name',
-          img: 'https://via.placeholder.com/350x150',
-          description: '',
-          link: '',
-          githubRepo: ''
-        },
-        {
-          id: '3',
-          name: 'project name',
-          img: 'https://via.placeholder.com/350x150',
-          description: '',
-          link: '',
-          githubRepo: ''
-        },
-        {
-          id: '4',
-          name: 'project name',
-          img: 'https://via.placeholder.com/350x150',
-          description: '',
-          link: '',
-          githubRepo: ''
         }
       ]
     }
@@ -77,6 +46,10 @@ export default {
 <style lang="scss">
 .portfolio-section {
   min-height: 100vh;
+
+  &__title {
+    color: var(--accent-color);
+  }
 }
 
 .projects {

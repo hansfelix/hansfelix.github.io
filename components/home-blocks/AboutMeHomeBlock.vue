@@ -9,10 +9,11 @@
         <div class="about-me__first-text-description">
           {{ $t('index.description') }}
         </div>
-        <Lines45Svg class="icon" />
       </div>
       <div class="about-me__photo">
         <img class="image" src="/images/hans-felix.png" alt="Hans Felix" />
+        <MochePatternSvg class="about-me__icon-moche-pattern" />
+        <GitSvg class="about-me__icon-git" />
       </div>
       <div class="about-me__second-text">
         {{ $t('index.playgroundText') }}
@@ -24,12 +25,14 @@
 
 <script>
 import HomeBlockTemplate from './HomeBlockTemplate.vue'
-import Lines45Svg from '~/assets/icons/mochica-detail.svg?inline'
+import MochePatternSvg from '~/assets/icons/moche-pattern.svg?inline'
+import GitSvg from '~/assets/icons/git.svg?inline'
 
 export default {
   components: {
     HomeBlockTemplate,
-    Lines45Svg
+    MochePatternSvg,
+    GitSvg
   }
 }
 </script>
@@ -85,6 +88,24 @@ export default {
     }
   }
 
+  &__icon-moche-pattern {
+    position: absolute;
+    width: 100px;
+    top: 75%;
+    left: -5%;
+    fill: var(--text-color);
+    z-index: 100;
+    mix-blend-mode: multiply;
+  }
+  &__icon-git {
+    position: absolute;
+    width: 40px;
+    top: 30%;
+    right: 0px;
+    fill: var(--accent-color);
+    z-index: 100;
+    mix-blend-mode: multiply;
+  }
   &__first-text {
     justify-self: center;
     // line-height: 1.4;

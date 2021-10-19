@@ -11,5 +11,8 @@
     "overline": "¡Hola! Mi nombre es",
     "description": "Desarrollador de software radicado en Perú, creo aplicaciones web que ayudan a las personas a desarrollar sus ideas y crecer sus negocios. Hago mis propios diseños.",
     "playgroundText": "Está página ha sido diseñado para poder customizarse, puedes actualizar los colores aquí:"
+  },
+  "portfolio": {
+    "title": "Últimos proyectos"
   }
 }
