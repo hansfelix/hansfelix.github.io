@@ -9,6 +9,7 @@
         <div class="about-me__first-text-description">
           {{ $t('index.description') }}
         </div>
+        <Lines45Svg class="icon" />
       </div>
       <div class="about-me__photo">
         <img class="image" src="/images/hans-felix.png" alt="Hans Felix" />
@@ -23,9 +24,12 @@
 
 <script>
 import HomeBlockTemplate from './HomeBlockTemplate.vue'
+import Lines45Svg from '~/assets/icons/lines45.svg?inline'
+
 export default {
   components: {
-    HomeBlockTemplate
+    HomeBlockTemplate,
+    Lines45Svg
   }
 }
 </script>
@@ -36,7 +40,7 @@ export default {
 }
 
 .about-me {
- // height: 100%;
+  // height: 100%;
   align-self: center;
   display: grid;
   grid-template-rows: 1fr 1;
@@ -90,7 +94,7 @@ export default {
     align-self: flex-end;
   }
   &__first-text-name {
-    color: #6495b5;
+    color: var(--accent-color);
     font-size: 3em;
     margin-bottom: 10px;
     font-weight: normal;

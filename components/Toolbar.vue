@@ -98,6 +98,15 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --toolbar-background-color: #f8f8f8;
+  --sidebar-background-color: #212121;
+  &.dark-mode {
+    --toolbar-background-color: #181818;
+    --sidebar-background-color: #212121;
+  }
+}
+
 // Variables in dark mode
 .dark-mode .toolbar {
   --link-text-color: #{$text-color-dark};
@@ -109,7 +118,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--toolbar-background-color);
   transition: var(--main-transition);
 
   z-index: 10;
@@ -156,6 +165,7 @@ export default {
     justify-content: center;
 
     @include mq($until: md) {
+      background-color: var(--sidebar-background-color);
       flex-direction: column-reverse;
       position: fixed;
       top: 0;
@@ -163,7 +173,6 @@ export default {
       width: 300px;
       height: 100%;
       padding-top: 60px;
-      background: var(--main-color);
       transform: translateX(100%);
       transition: 0.25s transform ease-in-out;
       z-index: 200;
@@ -188,6 +197,7 @@ export default {
     @include mq($until: md) {
       @include flex-and-center;
       flex-direction: column;
+      align-items: flex-end;
     }
   }
 
@@ -239,6 +249,11 @@ export default {
     @include mq($until: md) {
       margin: 0 0 24px 0;
       font-size: 18px;
+
+      // Null margin right, item are in vertical position
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 

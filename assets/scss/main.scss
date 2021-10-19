@@ -14,10 +14,9 @@ html {
 :root {
   // Colors
   --primary-color: #6495b5;
-  --main-color: #f8f8f8;
   --secondary-color: TBD;
-  --accent-color: #6495b5;
-  --background-color: #f8f8f8;
+  --accent-color: #FFA500;
+
   --constrast-background-color-50: rgb(0, 0, 0, 0.5);
   --constrast-background-color-25: rgb(0, 0, 0, 0.1);
   --text-color: #6c6c6c;
@@ -34,12 +33,11 @@ html {
 // Variables on Dark Mode
 .dark-mode {
   // Colors
-  --main-color: #1a252e;
+  --primary-color: #6495b5;
   --secondary-color: TBD;
-  --accent-color: #6495b5;
-  --text-color: #94a2ad;
+  --accent-color: #FFA500;
 
-  --background-color: #1a252e;
+  --text-color: #94a2ad;
 }
 
 // Variables on Mobile
