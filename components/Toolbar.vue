@@ -23,7 +23,7 @@
         :class="{ 'toolbar__content--active': isContentVisible }"
       >
         <div class="toolbar__nav">
-          <NuxtLink class="toolbar__link" to="/">
+          <NuxtLink class="toolbar__link" to="#about-me">
             {{ $t('links.aboutMe') }}
           </NuxtLink>
           <NuxtLink class="toolbar__link" to="#portfolio">
@@ -219,15 +219,18 @@ export default {
     &:not(:last-child) {
       margin-right: 20px;
     }
+    &:hover {
+      color: var(--text-color-accent);
+    }
     &.is-active {
-      color: black;
+      color: var(--accent-color);
       font-weight: 500;
       &::after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color: black;
+        background-color: var(--accent-color);
         height: 2px;
         border-radius: 20px;
         width: 100%;
