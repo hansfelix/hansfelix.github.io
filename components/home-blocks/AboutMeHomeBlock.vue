@@ -35,10 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
-.ad {
-  background-attachment: fixed;
-}
-
 .about-me {
   // height: 100%;
   align-self: center;
