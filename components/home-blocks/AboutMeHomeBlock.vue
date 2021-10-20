@@ -9,14 +9,17 @@
         <div class="about-me__first-text-description">
           {{ $t('index.description') }}
         </div>
-        <Lines45Svg class="icon" />
+
+        <MochicaDetailSvg class="about-me__icon-mochica-detail" />
       </div>
       <div class="about-me__photo">
         <img class="image" src="/images/hans-felix.png" alt="Hans Felix" />
+        <MochePatternSvg class="about-me__icon-moche-pattern" />
+        <GitSvg class="about-me__icon-git" />
       </div>
       <div class="about-me__second-text">
-        Está página la he diseñado para poder customizarla , porfavor intenta
-        aqui:
+        {{ $t('index.playgroundText') }}
+        <button href="button is-link">Configuración</button>
       </div>
     </div>
   </HomeBlockTemplate>
@@ -24,21 +27,21 @@
 
 <script>
 import HomeBlockTemplate from './HomeBlockTemplate.vue'
-import Lines45Svg from '~/assets/icons/mochica-detail.svg?inline'
+import MochePatternSvg from '~/assets/icons/moche-pattern.svg?inline'
+import MochicaDetailSvg from '~/assets/icons/anden-patern.svg?inline'
+import GitSvg from '~/assets/icons/git.svg?inline'
 
 export default {
   components: {
     HomeBlockTemplate,
-    Lines45Svg
+    MochePatternSvg,
+    MochicaDetailSvg,
+    GitSvg
   }
 }
 </script>
 
 <style lang="scss">
-.ad {
-  background-attachment: fixed;
-}
-
 .about-me {
   // height: 100%;
   align-self: center;
@@ -78,8 +81,6 @@ export default {
     }
 
     img {
-      // max-width: 250px;
-      border-radius: 50%;
       position: relative;
       z-index: 30;
       transition: 0.2s all ease-in-out;
@@ -91,6 +92,28 @@ export default {
     }
   }
 
+  &__icon-mochica-detail {
+    width: 160px;
+    stroke: var(--text-color);
+    stroke-width: 0.3px;
+  }
+  &__icon-moche-pattern {
+    position: absolute;
+    width: 100px;
+    top: 75%;
+    left: -5%;
+    fill: var(--text-color);
+    z-index: 100;
+    mix-blend-mode: multiply;
+  }
+  &__icon-git {
+    position: absolute;
+    width: 40px;
+    top: 30%;
+    right: 0px;
+    fill: var(--accent-color);
+    z-index: 100;
+  }
   &__first-text {
     justify-self: center;
     // line-height: 1.4;
