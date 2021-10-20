@@ -31,7 +31,7 @@
   animation: 1s appear;
 
   &__decorator {
-    fill: var(--primary-color);
+    fill: var(--accent-color);
   }
 
   &__h-letter {

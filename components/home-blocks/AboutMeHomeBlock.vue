@@ -9,6 +9,8 @@
         <div class="about-me__first-text-description">
           {{ $t('index.description') }}
         </div>
+
+        <MochicaDetailSvg class="about-me__icon-mochica-detail" />
       </div>
       <div class="about-me__photo">
         <img class="image" src="/images/hans-felix.png" alt="Hans Felix" />
@@ -26,12 +28,14 @@
 <script>
 import HomeBlockTemplate from './HomeBlockTemplate.vue'
 import MochePatternSvg from '~/assets/icons/moche-pattern.svg?inline'
+import MochicaDetailSvg from '~/assets/icons/anden-patern.svg?inline'
 import GitSvg from '~/assets/icons/git.svg?inline'
 
 export default {
   components: {
     HomeBlockTemplate,
     MochePatternSvg,
+    MochicaDetailSvg,
     GitSvg
   }
 }
@@ -88,6 +92,11 @@ export default {
     }
   }
 
+  &__icon-mochica-detail {
+    width: 160px;
+    stroke: var(--text-color);
+    stroke-width: 0.3px;
+  }
   &__icon-moche-pattern {
     position: absolute;
     width: 100px;
@@ -104,7 +113,6 @@ export default {
     right: 0px;
     fill: var(--accent-color);
     z-index: 100;
-    mix-blend-mode: multiply;
   }
   &__first-text {
     justify-self: center;
