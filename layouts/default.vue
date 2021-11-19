@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss">
 :root {
-  --layout-background-color: #f8f8f8;
+  --layout-background-color:#dcdcd9;
   &.dark-mode {
     --layout-background-color: #181818;
   }

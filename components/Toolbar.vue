@@ -111,7 +111,7 @@ export default {
 
 <style lang="scss">
 :root {
-  --toolbar-background-color: #f8f8f8;
+  --toolbar-background-color: #dcdcd9;
   --sidebar-background-color: #212121;
   &.dark-mode {
     --toolbar-background-color: #181818;
