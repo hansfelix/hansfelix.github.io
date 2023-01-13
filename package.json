@@ -33,7 +33,7 @@
     "babel-jest": "^27.3.0",
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.19.1",
+    "eslint-plugin-vue": "^9.9.0",
     "fibers": "^5.0.0",
     "jest": "^27.3.0",
     "normalize.css": "^8.0.1",
