@@ -21,7 +21,7 @@
                 <svg class="index-page__about-this-site-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 9.5 17" stroke-width="2" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M1 1l7.5 7.5-7.5 7.5"></path>
-                </svg> 
+                </svg>
                 <span>ABOUT THIS SITE</span>
             </div>
             <p>A beautiful, responsive, statically-generated with nuxt application written with modern javascript.</p>
@@ -30,6 +30,9 @@
 </template>
   
 <style lang="scss">
+// space used on padding or margin in order to avoid hit the main image
+$space-out-image: 1rem;
+
 .index-page {
     display: grid;
     grid-template-columns: 1fr;
@@ -55,7 +58,7 @@
         font-size: 2.75rem;
         font-weight: 400;
         letter-spacing: 1px;
-        padding-right: 1rem; // Avoid text hit with image
+        padding-right: $space-out-image; // Avoid text hit with image
         box-sizing: border-box;
 
         @include mq($from: tablet) {
@@ -98,14 +101,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include mq($from: tablet) {
+            padding-left: $space-out-image * 4;
+        }
     }
 
-    &__about-this-site-title{
+    &__about-this-site-title {
         color: var(--primary-color);
         font-weight: 500;
     }
 
-    &__about-this-site-icon{
+    &__about-this-site-icon {
         display: inline-block;
         vertical-align: middle;
         height: 0.9rem;
