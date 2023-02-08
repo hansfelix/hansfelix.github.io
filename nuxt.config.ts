@@ -4,7 +4,10 @@ export default defineNuxtConfig({
         css:{
             preprocessorOptions:{
                 scss:{
-                    additionalData: '@import "@/assets/scss/main.scss";',
+                    additionalData: `
+                    @import "@/node_modules/sass-mq/_mq.scss";
+                    @import "@/assets/scss/main.scss";
+                    `,
                 }
             }
         }

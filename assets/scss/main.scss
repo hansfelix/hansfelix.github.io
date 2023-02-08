@@ -1,3 +1,21 @@
 @import "normalize";
 @import "fonts";
 
+:root {
+    --backgroud-color: #18181b;
+    --primary-color: #e15b28;
+}
+
+// Font size for each device
+html {
+    font-size: 14px;
+    @include mq($from: tablet) {
+        font-size: 15px;
+    }
+    @include mq($from: desktop) {
+        font-size: 16px;
+    }
+    @include mq($from: wide) {
+        font-size: 17px;
+    }
+}

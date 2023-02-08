@@ -1,9 +1,11 @@
 <template>
     <section class="default-layout">
         <slot name="header">
-            Default slot content for <code>Custom</code> layout
+            <Header />
         </slot>
-        <slot />
+        <div class="default-layout__container">
+            <slot />
+        </div>
     </section>
 </template>
 
@@ -17,7 +19,12 @@ export default {
 
 <style lang="scss">
 .default-layout {
-    max-width: 1320px;
-    margin: auto;
+    background-color: var(--backgroud-color);
+    color: white;
+
+    &__container {
+        max-width: 1320px;
+        margin: auto;
+    }
 }
 </style>
