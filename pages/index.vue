@@ -2,7 +2,7 @@
     <section class="index-page">
         <div class="index-page__presentation">
             <h1 class="index-page__presentation-text">Hi! 👋 <br /> My name is <br /><strong>Hans Felix</strong></h1>
-            <button> PROTAFOLIO</button>
+            <button class="button">PORTAFOLIO</button>
             <img class="index-page__presentation-img" src="/img/hans-felix-bw.png" alt="Hans Felix" />
         </div>
         <div class="index-page__about-me">
@@ -48,7 +48,9 @@ $space-out-image: 1rem;
 
     &__presentation {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
         grid-row: 1/3;
         position: relative;
     }
