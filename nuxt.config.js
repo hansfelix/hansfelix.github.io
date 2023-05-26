@@ -31,6 +31,7 @@ export default {
       { hid: "og:type", name: "og:type", content: "website" },
       { hid: "og:locale", name: "og:locale", content: "en_US" },
       { hid: "og:locale:alternate", name: "og:locale:alternate", content: "es_ES" },
+      { name: "google-site-verification", content: "2uFKvv_7QFM5TJy-r__8JKf81nfid-FQQLZQiDDKSpU" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
