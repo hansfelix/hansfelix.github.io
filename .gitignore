@@ -1,13 +1,23 @@
-# nuxt.js build output
+# Nuxt dev/build outputs
+.output
 .nuxt
-
-# Nuxt generate
+.nitro
+.cache
 dist
 
-# Service worker
-sw.*
-
-# Optional eslint cache
-.eslintcache
-
+# Node dependencies
 node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
