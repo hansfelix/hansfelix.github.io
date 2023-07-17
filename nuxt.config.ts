@@ -1,15 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  // vite: {
-  //   css: {
-  //     preprocessorOptions: {
-  //       scss: {
-  //         additionalData: '@use "@/assets/_colors.scss" as *;',
-  //       },
-  //     },
-  //   },
-  // },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use '@/node_modules/sass-mq/mq' with (
+            $breakpoints: (
+              small: 576px,
+              medium: 768px,
+              large: 992px,
+              extra-large: 1200px,
+              extra-extra-large: 1400px,
+            )
+          );`
+        },
+      },
+    },
+  },
 
   modules: [
     [

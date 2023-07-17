@@ -4,8 +4,10 @@
             <div class="container">
                 <div class="about-us">
                     <div>
-                        <div class="main-text__overline">Hi! My name is</div>
-                        <h1 class="main-text__title">Hans Felix</h1>
+                        <div class="main-text">
+                            <div class="main-text__overline">Hi! My name is</div>
+                            <h1 class="main-text__title">Hans Felix</h1>
+                        </div>
                         <p>
                             I am an experienced software developer based in Peru, specializing in building exceptional
                             websites. Occasionally designing. Passionate about combining beautiful code with beautiful
@@ -14,7 +16,9 @@
                         <button>VER TRABAJOS</button>
                         <button>CONTACTAR</button>
                     </div>
-                    <img src="https://hansfelix.github.io/images/hans-felix.jpg" alt="">
+                    <div class="main-img__wrapper">
+                        <img class="main-img" src="test.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
@@ -51,7 +55,7 @@ const colorModes = ref(colorMode);
 .index-block {
     // TODO: Improve creating globlas scss vars and calc height
     min-height: 100vh;
-    padding: 50px 0;
+    padding: 2.5rem 0;
 
     display: flex;
     align-items: center;
@@ -67,6 +71,31 @@ const colorModes = ref(colorMode);
 
 .about-us {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    @include mq.mq($from: medium) {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.main-text {
+    &__title {
+        font-size: 4rem;
+        font-weight: 500;
+        margin: 0 0 .5rem;
+    }
+}
+
+.main-img {
+    background-color: var(--header-background);
+    transition: background-color var(--main-transition);
+
+    &__wrapper {
+        border-radius: 50%;
+        line-height: 0;
+        overflow: hidden;
+    }
 }
 </style>
