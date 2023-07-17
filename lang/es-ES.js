@@ -1,3 +1,5 @@
 export default {
-  welcome: "Bienvenido",
+  header: {
+    projects: "Proyectos"
+  },
 };

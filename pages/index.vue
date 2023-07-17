@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="index-block">
+        <section class="index-block is-first">
             <div class="container">
                 <div class="about-us">
                     <div>
@@ -52,11 +52,13 @@ const colorModes = ref(colorMode);
     // TODO: Improve creating globlas scss vars and calc height
     min-height: 100vh;
     padding: 50px 0;
-    border-top: 1px solid; // Delete
 
     display: flex;
     align-items: center;
 
+    &.is-first {
+        min-height: calc(100vh - var(--header-height));
+    }
 
     &.is-last {
         min-height: calc(100vh - var(--footer-height));

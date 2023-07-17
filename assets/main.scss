@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Space+Grotesk:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Space+Grotesk:wght@300;400;500&display=swap");
 @import "link";
 
 html{    
@@ -10,12 +10,24 @@ html{
 }
 
 :root {
-    --text-color: #494c51;
+    --text-color: #222620;
+    --background: #e5e7e3;
+    --header-background: #d6dad3;
+
+    --main-transition: 0.25s ease-in-out;
+}
+
+:root.dark-mode{
+    --text-color: #e5e7e3;
+    --background: #222620;
+    --header-background: #30352e;
 }
 
 body {
-    color: #494c51;
+    color: var(--text-color);
     font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    transition: color var(--main-transition);
 }
 
 // CONTAINER

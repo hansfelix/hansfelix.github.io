@@ -1,4 +1,5 @@
 export default {
-    welcome: "Welcome",
-  };
-  
+  header: {
+    projects: "Projects"
+  },
+};
